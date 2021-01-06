@@ -1,7 +1,6 @@
 import React from "react";
 import { AiFillHome } from "react-icons/ai";
 import { IoSchoolSharp } from "react-icons/io5";
-import { WiStars } from "react-icons/wi";
 import { GoProject } from "react-icons/go";
 import { FaInfoCircle, FaStar } from "react-icons/fa";
 

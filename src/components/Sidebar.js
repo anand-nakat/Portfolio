@@ -6,8 +6,9 @@ import { useGlobalContext } from "../context";
 
 import { dateObject } from "../utilities/Day-Months";
 const Sidebar = () => {
-  const { currentDate, currentDay, currentMonth, currentYear } = dateObject;
+  const { currentDate, currentDay, currentMonth } = dateObject;
   const { navbarHeight, isSidebarOpen, setIsSidebarOpen } = useGlobalContext();
+  const pathname = window.location.pathname;
 
   const aside = useRef(null);
   const closeSidebar = () => {
@@ -15,41 +16,64 @@ const Sidebar = () => {
     aside.current.classList.add("-left-full");
     setIsSidebarOpen(false);
   };
+
+  function handleClick(e) {
+    if (!e.target.classList.contains("sidebar")) {
+      closeSidebar();
+    }
+  }
+
   useEffect(() => {
     aside.current.style.top = `${navbarHeight + 0.5}px`;
   }, [navbarHeight]);
   return (
-    <aside
-      ref={aside}
-      className={` sidebar
+    <>
+      <div
+        className={`overlay min-h-screen min-w-full bg-black fixed top-0 left-0 opacity-90 md:hidden 
+        ${isSidebarOpen ? null : `hidden`}`}
+        onClick={(e) => handleClick(e)}
+      ></div>
+      <aside
+        ref={aside}
+        className={` sidebar
       ${isSidebarOpen ? "left-0" : `-left-full`}`}
-    >
-      <div className="menu-heading">
-        <h1>{`${currentDay}, ${currentDate} ${currentMonth} `} </h1>
-        <AiOutlineMenuFold
-          onClick={() => closeSidebar()}
-          className="submenu-close-btn"
-        />
-      </div>
-      <div className="h-5/6 mt-3 ">
-        <ul className="flex flex-col h-full items-start justify-evenly text-lg">
-          {links.map((item) => {
-            const { id, link, icon, title } = item;
-            return (
-              <li key={id} className="menu-item">
-                <Link
-                  to={link}
-                  className="pl-1 flex-centered justify-start space-x-1"
+      >
+        <div className="menu-heading">
+          <h1>{`${currentDay}, ${currentDate} ${currentMonth} `} </h1>
+          <AiOutlineMenuFold
+            onClick={() => closeSidebar()}
+            className="submenu-close-btn"
+          />
+        </div>
+        <div className="h-5/6 mt-3 ">
+          <ul className="flex flex-col h-full items-start justify-evenly text-lg">
+            {links.map((item) => {
+              const { id, link, icon, title } = item;
+              return (
+                <li
+                  key={id}
+                  className={`menu-item 
+                ${
+                  pathname === link
+                    ? "dark:bg-blue-500 bg-yellow-500 scale-105"
+                    : "hover:text-white hover:translate-y-2"
+                }
+                `}
                 >
-                  <span>{icon}</span>
-                  <p>{title}</p>
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-    </aside>
+                  <Link
+                    to={link}
+                    className="flex-centered justify-start md:space-x-1 pl-1 space-x-1.5"
+                  >
+                    <span>{icon}</span>
+                    <p>{title}</p>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </aside>
+    </>
   );
 };
 

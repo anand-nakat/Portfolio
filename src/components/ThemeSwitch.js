@@ -25,18 +25,18 @@ const ThemeSwitch = () => {
   return (
     <div
       className="absolute dark:text-gray-50 flex items-center md:top-16 
-    right-2 space-x-0.5 text-gray-900 text-lg top-1.5"
+    right-2 space-x-0.5 text-gray-800 text-2xl top-1.5"
     >
-      <div
-        className="flex flex-col items-center cursor-pointer "
+      <HiMoon
+        className={`${
+          !checked ? "text-yellow-500 dark:text-yellow-400" : null
+        } cursor-pointer hover:text-yellow-500 dark:hover:text-yellow-300 hover:scale-110 transform transition-all`}
         onClick={() => {
           setChecked(false);
           toggleDarkMode();
         }}
-      >
-        <HiMoon className="toggle-mode-icons" />
-        <p className=" font-medium text-xs ">Dark</p>
-      </div>
+      />
+
       <Switch
         checked={checked}
         onChange={toggleDarkMode}
@@ -44,22 +44,22 @@ const ThemeSwitch = () => {
         checkedIcon={false}
         boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
         activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
-        height={20}
+        height={15}
         width={48}
         onColor={`#3958af`}
         offColor={`#3958af`}
-        handleDiameter={22}
+        handleDiameter={20}
       />
-      <div
-        className="flex flex-col items-center  cursor-pointer "
+
+      <HiSun
+        className={`${
+          !checked ? null : "text-yellow-500 dark:text-yellow-400"
+        } cursor-pointer hover:text-yellow-500 dark:hover:text-yellow-300 hover:scale-110 transform transition-all`}
         onClick={() => {
           setChecked(true);
           toggleDarkMode();
         }}
-      >
-        <HiSun className="toggle-mode-icons" />
-        <p className="font-medium text-xs space-y-1">Light</p>
-      </div>
+      />
     </div>
   );
 };
