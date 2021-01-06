@@ -46,8 +46,8 @@ const ThemeSwitch = () => {
         activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
         height={15}
         width={48}
-        onColor={`#3958af`}
-        offColor={`#3958af`}
+        onColor={`#0d2467`}
+        offColor={`#0d2467`}
         handleDiameter={20}
       />
 

@@ -29,7 +29,7 @@ const Sidebar = () => {
   return (
     <>
       <div
-        className={`overlay min-h-screen min-w-full bg-black fixed top-0 left-0 opacity-90 md:hidden 
+        className={`overlay min-h-screen min-w-full bg-black fixed top-0 left-0 opacity-90 md:hidden z-10 
         ${isSidebarOpen ? null : `hidden`}`}
         onClick={(e) => handleClick(e)}
       ></div>
@@ -46,7 +46,7 @@ const Sidebar = () => {
           />
         </div>
         <div className="h-5/6 mt-3 ">
-          <ul className="flex flex-col h-full items-start justify-evenly text-lg">
+          <ul className="flex flex-col h-full items-start justify-evenly  ">
             {links.map((item) => {
               const { id, link, icon, title } = item;
               return (
@@ -55,7 +55,7 @@ const Sidebar = () => {
                   className={`menu-item 
                 ${
                   pathname === link
-                    ? "dark:bg-blue-500 bg-yellow-500 scale-105"
+                    ? "dark:bg-blue-500 bg-yellow-600 scale-105"
                     : "hover:text-white hover:translate-y-2"
                 }
                 `}
