@@ -19,37 +19,45 @@ const Sidebar = () => {
     aside.current.style.top = `${navbarHeight + 0.5}px`;
   }, [navbarHeight]);
   return (
-    <aside
-      ref={aside}
-      className={` sidebar
+    <>
+      <main
+        className={`h-screen w-full fixed top-0 left-0 z-10 md:hidden 
+        ${isSidebarOpen ? null : `hidden`}`}
+        style={{ background: `#000000de` }}
+      >
+        <aside
+          ref={aside}
+          className={` sidebar 
       ${isSidebarOpen ? "left-0" : `-left-full`}`}
-    >
-      <div className="menu-heading">
-        <h1>{`${currentDay}, ${currentDate} ${currentMonth} `} </h1>
-        <AiOutlineMenuFold
-          onClick={() => closeSidebar()}
-          className="submenu-close-btn"
-        />
-      </div>
-      <div className="h-5/6 mt-3 ">
-        <ul className="flex flex-col h-full items-start justify-evenly text-lg">
-          {links.map((item) => {
-            const { id, link, icon, title } = item;
-            return (
-              <li key={id} className="menu-item">
-                <Link
-                  to={link}
-                  className="pl-1 flex-centered justify-start space-x-1"
-                >
-                  <span>{icon}</span>
-                  <p>{title}</p>
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-    </aside>
+        >
+          <div className="menu-heading">
+            <h1>{`${currentDay}, ${currentDate} ${currentMonth} `} </h1>
+            <AiOutlineMenuFold
+              onClick={() => closeSidebar()}
+              className="submenu-close-btn"
+            />
+          </div>
+          <div className="h-5/6 mt-3 ">
+            <ul className="flex flex-col h-full items-start justify-evenly text-lg">
+              {links.map((item) => {
+                const { id, link, icon, title } = item;
+                return (
+                  <li key={id} className="menu-item">
+                    <Link
+                      to={link}
+                      className="pl-1 flex-centered justify-start space-x-1"
+                    >
+                      <span>{icon}</span>
+                      <p>{title}</p>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </aside>
+      </main>
+    </>
   );
 };
 
