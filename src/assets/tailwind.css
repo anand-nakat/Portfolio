@@ -14,7 +14,7 @@
   .navbar {
     @apply fixed top-0 border-b-2 border-yellow-500 bg-blue-900 dark:border-blue-100
        text-blue-50 flex-centered font-semibold 
-      p-3  text-2xl dark:bg-black  w-full z-10;
+      p-3  text-2xl dark:bg-black  w-full z-20;
   }
   .sidebar-open-btn {
     @apply absolute transform -translate-y-1/2  cursor-pointer hover:text-white hover:scale-110 transition-all
@@ -26,7 +26,7 @@
 
   .sidebar {
     @apply fixed md:static h-full bg-blue-900 dark:bg-gray-900 dark:text-gray-50  md:left-0 
-      p-2 rounded-r text-gray-50 top-0 transition-all w-52 xl:w-auto;
+      p-2 rounded-r text-gray-50 top-0 transition-all w-52 xl:w-auto z-10;
   }
   .submenu-close-btn {
     @apply md:hidden cursor-pointer hover:scale-110 hover:text-white text-4xl transform transition;
