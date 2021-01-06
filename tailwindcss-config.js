@@ -1,11 +1,21 @@
 module.exports = {
   purge: [],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: "class", // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "blue-950": "#1c2e61",
+      },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+        josefin: ["Josefin Sans", "sans-serif"],
+        raleway: ["Raleway", "sans-serif"],
+        dosis: ["Dosis", "sans-serif"],
+      },
+    },
   },
   variants: {
     extend: {},
   },
   plugins: [],
-}
+};

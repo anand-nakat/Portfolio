@@ -1,3 +1,56 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .flex-centered {
+    @apply flex justify-center items-center;
+  }
+  .grid-col-custom {
+    grid-template-columns: auto repeat(2, minmax(0, 1fr));
+  }
+
+  /* navbar */
+  .navbar {
+    @apply fixed top-0 border-b-2 border-yellow-500 bg-blue-900 dark:border-blue-100
+       text-blue-50 flex-centered font-semibold 
+      p-3  text-2xl dark:bg-black  w-full z-10;
+  }
+  .sidebar-open-btn {
+    @apply absolute transform -translate-y-1/2  cursor-pointer hover:text-blue-800 dark:hover:text-white
+      left-2 md:hidden text-3xl top-1/2 animate-pulse;
+  }
+  /* navba end */
+
+  /*sidebar */
+
+  .sidebar {
+    @apply fixed md:static h-full bg-blue-900 dark:bg-gray-900 dark:text-gray-50  md:left-0 
+      p-2 rounded-r text-gray-50 top-0 transition-all w-52 xl:w-auto;
+  }
+  .submenu-close-btn {
+    @apply md:hidden cursor-pointer hover:scale-110 hover:text-white text-3xl transform transition;
+  }
+  .menu-item {
+    @apply dark:hover:bg-blue-500 hover:bg-yellow-500 
+                hover:scale-110 hover:text-white hover:translate-y-2 transform transition-all w-full;
+  }
+  .menu-heading {
+    @apply dark:text-blue-300 flex-centered justify-between text-lg text-yellow-300;
+  }
+
+  .grid-container {
+    @apply grid-col-custom md:gap-3 md:grid min-h-screen xl:grid-cols-5;
+  }
+  .page-container {
+    @apply col-span-full dark:text-gray-50 flex-centered flex-col md:col-start-2 mt-14 p-6 pt-16 
+      space-y-6 text-gray-900 text-xl;
+  }
+  .page-heading {
+    @apply border-b-2 border-gray-800 dark:border-red-50 dark:text-yellow-300 font-josefin 
+        text-3xl tracking-wide;
+  }
+  .my-image {
+    @apply border-2 border-gray-700 dark:border-gray-400 mx-auto rounded-full shadow-xl w-2/5;
+  }
+}
