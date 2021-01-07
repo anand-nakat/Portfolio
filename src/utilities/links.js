@@ -3,6 +3,7 @@ import { AiFillHome } from "react-icons/ai";
 import { IoSchoolSharp } from "react-icons/io5";
 import { GoProject } from "react-icons/go";
 import { FaInfoCircle, FaStar } from "react-icons/fa";
+import { MdMore } from "react-icons/md";
 
 export const links = [
   {
@@ -19,18 +20,24 @@ export const links = [
   },
   {
     id: 3,
-    title: "Skills and Hobbies",
+    title: "Skills",
     link: "/skills",
     icon: <FaStar />,
   },
   {
     id: 4,
-    title: "Projects",
+    title: "My Work",
     link: "/projects",
     icon: <GoProject />,
   },
   {
     id: 5,
+    title: "More",
+    link: "/projects",
+    icon: <MdMore />,
+  },
+  {
+    id: 6,
     title: "About",
     link: "/about",
     icon: <FaInfoCircle />,

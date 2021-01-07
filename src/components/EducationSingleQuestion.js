@@ -8,28 +8,24 @@ const EducationSingleQuestion = ({ title, info, index }) => {
 
   return (
     <div
-      className={`bg-gray-50 my-2 dark:bg-gray-900 dark:text-gray-100 p-2 px-4 rounded-lg
-    shadow-lg text-gray-800  transform transition-transform cursor-pointer ${
-      showDropdown ? null : "hover:scale-105"
-    }`}
+      className={`card ${showDropdown ? null : "hover:scale-105"}`}
       onClick={() => {
         if (!showDropdown) {
           setShowDropdown(!showDropdown);
         }
       }}
     >
-      <h2 className="flex-centered text-lg font-black font-raleway justify-between leading-relaxed mb-1.5 tracking-wide uppercase">
+      <h2 className="card-header">
         {title}{" "}
         <span
-          className="dark:text-yellow-300 text-2xl text-blue-800 hover:text-blue-700 dark:hover:text-yellow-400 
-              transition-all cursor-pointer transform hover:rotate-180"
+          className="card-toggle-btn"
           onClick={() => setShowDropdown(!showDropdown)}
         >
           {showDropdown ? <AiFillMinusCircle /> : <BsFillPlusCircleFill />}
         </span>
       </h2>
       {showDropdown && (
-        <div className="font-extralight font-sans text-lg">
+        <div className="font-extralight font-sans lg:text-xl text-lg">
           <ul>
             {info.map((item, index) => {
               const {

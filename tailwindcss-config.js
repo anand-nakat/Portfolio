@@ -4,13 +4,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "blue-950": "#1c2e61",
+        "blue-950": "#0d2467",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
         josefin: ["Josefin Sans", "sans-serif"],
         raleway: ["Raleway", "sans-serif"],
-        dosis: ["Dosis", "sans-serif"],
       },
     },
   },
