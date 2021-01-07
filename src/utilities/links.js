@@ -1,5 +1,5 @@
 import React from "react";
-import { AiFillHome } from "react-icons/ai";
+import { AiFillHome, AiOutlineLink } from "react-icons/ai";
 import { IoSchoolSharp } from "react-icons/io5";
 import { GoProject } from "react-icons/go";
 import { FaInfoCircle, FaStar } from "react-icons/fa";
@@ -38,8 +38,8 @@ export const links = [
   },
   {
     id: 6,
-    title: "About",
-    link: "/about",
-    icon: <FaInfoCircle />,
+    title: "Connect",
+    link: "/connect",
+    icon: <AiOutlineLink />,
   },
 ];

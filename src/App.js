@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
-import About from "./pages/About";
+import Connect from "./pages/Connect";
 import Education from "./pages/Education";
 import ErrorPage from "./pages/ErrorPage";
 import Projects from "./pages/Projects";
@@ -32,8 +32,8 @@ const App = () => {
           <Route path="/projects">
             <Projects />
           </Route>
-          <Route path="/about">
-            <About />
+          <Route path="/connect">
+            <Connect />
           </Route>
           <Route path="*">
             <ErrorPage />
