@@ -5,6 +5,22 @@ const AppContext = React.createContext();
 const AppProvider = ({ children }) => {
   const [navbarHeight, setNavbarHeight] = useState(0);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [modalContent, setModalContent] = useState("");
+  function openModal() {
+    setIsModalOpen(true);
+  }
+  function closeModal() {
+    setIsModalOpen(false);
+  }
+  /*   useCallback(function setModalText(text) {
+    setModalContent(text);
+  }, []); */
+
+  const setModalText = useCallback((text) => {
+    setModalContent(text);
+  }, []);
+
   function changeNavbarHeight(height) {
     setNavbarHeight(height);
   }
@@ -24,6 +40,11 @@ const AppProvider = ({ children }) => {
         openSidebar,
         isSidebarOpen,
         setIsSidebarOpen,
+        isModalOpen,
+        modalContent,
+        openModal,
+        closeModal,
+        setModalText,
       }}
     >
       {children}

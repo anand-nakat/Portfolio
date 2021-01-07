@@ -24,6 +24,7 @@ const Sidebar = () => {
   }
 
   useEffect(() => {
+    console.log(aside.current.getBoundingClientRect());
     aside.current.style.top = `${navbarHeight + 0.5}px`;
   }, [navbarHeight]);
   return (
@@ -46,13 +47,13 @@ const Sidebar = () => {
           />
         </div>
         <div className="h-5/6 mt-3 ">
-          <ul className="flex flex-col h-full items-start justify-evenly  ">
+          <ul className="flex flex-col h-full items-start justify-evenly fixed ">
             {links.map((item) => {
               const { id, link, icon, title } = item;
               return (
                 <li
                   key={id}
-                  className={`menu-item 
+                  className={`menu-item
                 ${
                   pathname === link
                     ? "dark:bg-blue-500 bg-yellow-600 scale-105"
@@ -62,7 +63,7 @@ const Sidebar = () => {
                 >
                   <Link
                     to={link}
-                    className="flex-centered justify-start md:space-x-1 pl-1 space-x-1.5"
+                    className="flex-centered justify-start md:space-x-1 pl-1 px-30 space-x-1.5"
                   >
                     <span>{icon}</span>
                     <p>{title}</p>

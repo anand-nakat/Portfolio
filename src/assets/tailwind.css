@@ -32,7 +32,7 @@
     @apply md:hidden cursor-pointer hover:scale-110 hover:text-white text-4xl transform transition;
   }
   .menu-item {
-    @apply dark:hover:bg-blue-500 hover:bg-yellow-600 transform transition-all w-full;
+    @apply dark:hover:bg-blue-500 hover:bg-yellow-600 transform transition-all  w-48 xl:w-56;
   }
   .menu-heading {
     @apply dark:text-blue-300 flex-centered justify-between text-xl text-yellow-400
@@ -67,5 +67,39 @@
   .card-toggle-btn {
     @apply dark:text-yellow-300 text-2xl text-blue-950 hover:text-blue-800 dark:hover:text-yellow-400 
               transition-all cursor-pointer transform hover:rotate-180;
+  }
+
+  .tooltip {
+    @apply -translate-x-1/2 animate-tooltip bg-indigo-300 bottom-4 dark:bg-indigo-300 dark:text-indigo-800 fixed font-raleway 
+    font-semibold left-1/2 my-5 p-2 px-3  rounded-lg sm:max-w-max text-indigo-800 text-lg transform w-max;
+  }
+}
+
+@layer utilities {
+  .animate-tooltip {
+    animation: tooltip-rise 4s ease-in-out 1;
+  }
+  @keyframes tooltip-rise {
+    0% {
+      transform: translateY(4rem);
+      opacity: 0;
+    }
+    25% {
+      opacity: 1;
+      transform: translateY(0rem);
+    }
+
+    50% {
+      opacity: 1;
+      transform: translateY(0rem);
+    }
+    75% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(0);
+    }
   }
 }

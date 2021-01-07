@@ -1,10 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Sidebar from "../components/Sidebar";
 import myself from "../images/myself.jpg";
+import Modal from "../components/Modal";
+import { dateObject } from "../utilities/Day-Months";
+import { useGlobalContext } from "../context";
 const Home = () => {
+  const { currentTime } = dateObject;
+  const { isModalOpen, openModal, setModalText } = useGlobalContext();
+  let tooltipContent = "";
+  if (currentTime > 5 && currentTime < 12) {
+    tooltipContent = "Good Morning!";
+  } else if (currentTime >= 12 && currentTime < 16) {
+    tooltipContent = "Good Afternoon!";
+  } else if (currentTime < 19) {
+    tooltipContent = "Good Evening!";
+  } else {
+    tooltipContent = "Good Night!";
+  }
+  useEffect(() => {
+    setModalText(tooltipContent);
+  }, [tooltipContent, setModalText]);
+
   return (
     <main className="grid-container">
       <Sidebar />
+      {isModalOpen && <Modal />}
       <div className="lg:space-y-4 page-container space-y-8">
         <div className="page-heading">Home</div>
 
