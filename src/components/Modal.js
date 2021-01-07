@@ -12,7 +12,10 @@ const Modal = () => {
     };
   }, [closeModal]); // eslint-disable-next-line
   return (
-    <div className="tooltip animate-tooltip">
+    <div
+      className="animate-tooltip max-w-xs md:max-w-max text-center tooltip z-40
+    "
+    >
       <span>{modalContent}</span>
     </div>
   );

@@ -70,8 +70,9 @@
   }
 
   .tooltip {
-    @apply -translate-x-1/2 animate-tooltip bg-indigo-300 bottom-4 dark:bg-indigo-300 dark:text-indigo-800 fixed font-raleway 
-    font-semibold left-1/2 my-5 p-2 px-3  rounded-lg sm:max-w-max text-indigo-800 text-lg transform w-max;
+    @apply fixed transform  left-1/2 bottom-4 -translate-x-1/2 animate-tooltip bg-indigo-300  dark:bg-indigo-300 
+    dark:text-indigo-800  font-raleway font-semibold  my-5 p-2 px-3  rounded-lg sm:max-w-max text-indigo-800 
+    text-lg  w-max;
   }
 }
 
@@ -80,7 +81,8 @@
     animation: tooltip-rise 4s ease-in-out 1;
   }
   @keyframes tooltip-rise {
-    0% {
+    0%,
+    100% {
       transform: translateY(4rem);
       opacity: 0;
     }
@@ -96,10 +98,6 @@
     75% {
       transform: translateY(0);
       opacity: 1;
-    }
-    100% {
-      opacity: 0;
-      transform: translateY(0);
     }
   }
 }

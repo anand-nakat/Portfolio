@@ -24,7 +24,5 @@ yarn-error.log*
 .eslintcache
 src/App.js
 debug.log
-src/images/project4.jpg
 
-src/images/project2.jpg
 

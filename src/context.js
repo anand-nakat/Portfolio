@@ -7,15 +7,12 @@ const AppProvider = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(true);
   const [modalContent, setModalContent] = useState("");
-  function openModal() {
+  const openModal = useCallback(() => {
     setIsModalOpen(true);
-  }
-  function closeModal() {
+  }, []);
+  const closeModal = useCallback(() => {
     setIsModalOpen(false);
-  }
-  /*   useCallback(function setModalText(text) {
-    setModalContent(text);
-  }, []); */
+  }, []);
 
   const setModalText = useCallback((text) => {
     setModalContent(text);
