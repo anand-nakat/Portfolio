@@ -33,7 +33,7 @@ export const links = [
   {
     id: 5,
     title: "More",
-    link: "/projects",
+    link: "/more",
     icon: <MdMore />,
   },
   {

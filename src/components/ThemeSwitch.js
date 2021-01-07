@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Switch from "react-switch";
-import { HiSun, HiMoon } from "react-icons/hi";
+import { HiOutlineSun as HiSun, HiOutlineMoon as HiMoon } from "react-icons/hi";
 
 const ThemeSwitch = () => {
   let mode = true;
@@ -29,7 +29,7 @@ const ThemeSwitch = () => {
     >
       <HiMoon
         className={`${
-          !checked ? "text-yellow-500 dark:text-yellow-400" : null
+          !checked ? "text-yellow-600 scale-110 dark:text-yellow-400" : null
         } cursor-pointer hover:text-yellow-500 dark:hover:text-yellow-300 hover:scale-110 transform transition-all`}
         onClick={() => {
           setChecked(false);
@@ -47,13 +47,13 @@ const ThemeSwitch = () => {
         height={15}
         width={48}
         onColor={`#0d2467`}
-        offColor={`#0d2467`}
+        offColor={`#e2bb57`}
         handleDiameter={20}
       />
 
       <HiSun
         className={`${
-          !checked ? null : "text-yellow-500 dark:text-yellow-400"
+          !checked ? null : "text-yellow-600 scale-110 dark:text-yellow-400"
         } cursor-pointer hover:text-yellow-500 dark:hover:text-yellow-300 hover:scale-110 transform transition-all`}
         onClick={() => {
           setChecked(true);

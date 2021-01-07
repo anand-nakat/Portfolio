@@ -1,15 +1,17 @@
 import React from "react";
 import Sidebar from "../components/Sidebar";
-import { skills } from "../utilities/skills";
-const Skills = () => {
+import { more } from "../utilities/more";
+
+const More = () => {
+  console.log(more);
   return (
     <main className="grid-container">
       <Sidebar />
-      <div className="page-container">
-        <div className="page-heading">Skills</div>
+      <div className="lg:space-y-4 page-container space-y-8">
+        <div className="page-heading">More About Me</div>
         <section className="min-w-full">
-          {skills.map((skill) => {
-            const { id, title, list } = skill;
+          {more.map((item) => {
+            const { id, title, list } = item;
             return (
               <div className="card" key={id}>
                 <h2 className="card-header">{title}</h2>
@@ -25,7 +27,7 @@ const Skills = () => {
                           {icon}
                         </div>
 
-                        <div>{title}</div>
+                        <div className="text-center">{title}</div>
                       </div>
                     );
                   })}
@@ -39,4 +41,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default More;

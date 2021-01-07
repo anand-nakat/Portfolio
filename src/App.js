@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Education from "./pages/Education";
 import ErrorPage from "./pages/ErrorPage";
 import Projects from "./pages/Projects";
+import More from "./pages/More";
 import Skills from "./pages/Skills";
 import Navbar from "./components/Navbar";
 import ThemeSwitch from "./components/ThemeSwitch";
@@ -24,6 +25,9 @@ const App = () => {
           </Route>
           <Route path="/skills">
             <Skills />
+          </Route>
+          <Route path="/more">
+            <More />
           </Route>
           <Route path="/projects">
             <Projects />
