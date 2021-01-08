@@ -90,7 +90,7 @@ User can search any of the color to generate different shades of the same color.
     link: "http://world-heritage-sites.infinityfreeapp.com/",
     description: `Dynamic Website connected to database, featuring Best World
                 Heritage Sites. User can like any site, which will be added to
-                his favourites collection. This collection is sotred in
+                his favourites collection. This collection is stored in
                 database, so it is accessible any time. Also it comes with a
                 admin view, admin can add new site, edit or delete existing
                 site, right through website.`,

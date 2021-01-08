@@ -10,9 +10,7 @@ const EducationSingleQuestion = ({ title, info, index }) => {
     <div
       className={`card`}
       onClick={() => {
-        if (!showDropdown) {
-          setShowDropdown(!showDropdown);
-        }
+        setShowDropdown(!showDropdown);
       }}
     >
       <h2 className="card-header">

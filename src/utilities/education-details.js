@@ -5,7 +5,7 @@ export const educationDetails = [
       {
         pointer: 9.84,
         university: "Pune University",
-        institute: "DY Patil College of Engineering, Akurdi",
+        institute: "DY Patil College of Engineering, Akurdi, Pune (Maharashtra)",
         graduationYear: 2022,
       },
     ],
@@ -17,7 +17,7 @@ export const educationDetails = [
       {
         percentage: `82.41%`,
         board: "Maharashtra State Board",
-        institute: "DY Patil College of Engineering, Akurdi",
+        institute: "Dawale Jr College, Akola (Maharashtra)",
         completionYear: 2018,
       },
     ],
@@ -28,7 +28,7 @@ export const educationDetails = [
       {
         pointer: 10,
         board: "CBSE Board",
-        institute: "Prabhat Kids School",
+        institute: "Prabhat Kids School, Akola (Maharashtra)",
         completionYear: 2016,
       },
     ],
