@@ -8,7 +8,7 @@ const EducationSingleQuestion = ({ title, info, index }) => {
 
   return (
     <div
-      className={`card ${showDropdown ? null : "hover:scale-105"}`}
+      className={`card`}
       onClick={() => {
         if (!showDropdown) {
           setShowDropdown(!showDropdown);

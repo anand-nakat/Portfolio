@@ -2,7 +2,7 @@ import React from "react";
 import { AiFillHome, AiOutlineLink } from "react-icons/ai";
 import { IoSchoolSharp } from "react-icons/io5";
 import { GoProject } from "react-icons/go";
-import { FaInfoCircle, FaStar } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
 import { MdMore } from "react-icons/md";
 
 export const links = [

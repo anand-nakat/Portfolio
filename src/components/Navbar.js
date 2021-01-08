@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { AiOutlineMenuUnfold } from "react-icons/ai";
 import { useGlobalContext } from "../context";
+import { Link } from "react-router-dom";
 
 import { dateObject } from "../utilities/Day-Months";
 
@@ -13,21 +14,21 @@ const Navbar = () => {
     const height = navbar.current.getBoundingClientRect().height;
 
     changeNavbarHeight(height);
-  }, []);
+  }, [changeNavbarHeight]);
   return (
     <nav ref={navbar} className="navbar">
       {!isSidebarOpen && (
         <AiOutlineMenuUnfold
           className=" sidebar-open-btn"
           onClick={(e) => {
-            console.log(e.target.classList);
             e.target.classList.remove("animate-pulse");
             openSidebar();
           }}
         />
       )}
-
-      <h1 className="">Anand Nakat</h1>
+      <Link to="/">
+        <h1 className="hover:text-white">Anand Nakat</h1>
+      </Link>
 
       <p className="font-normal ml-auto text-lg tracking-tight hidden md:inline-block">
         {`${currentDay}, ${currentDate} ${currentMonth} ${currentYear}`}

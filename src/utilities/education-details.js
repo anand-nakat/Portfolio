@@ -1,6 +1,6 @@
 export const educationDetails = [
   {
-    title: "Bachelor of Engineering (BE)*",
+    title: "Bachelor of Engineering (BE)",
     info: [
       {
         pointer: 9.84,

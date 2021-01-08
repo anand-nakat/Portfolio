@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useContext } from "react";
+import React, { useState, useCallback, useContext } from "react";
 
 const AppContext = React.createContext();
 
@@ -18,9 +18,9 @@ const AppProvider = ({ children }) => {
     setModalContent(text);
   }, []);
 
-  function changeNavbarHeight(height) {
+  const changeNavbarHeight = useCallback((height) => {
     setNavbarHeight(height);
-  }
+  }, []);
   function closeSidebar() {
     setIsSidebarOpen(false);
   }

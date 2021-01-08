@@ -23,10 +23,7 @@ const ThemeSwitch = () => {
     sessionStorage.setItem("Mode", checked ? `Dark` : `Light`);
   };
   return (
-    <div
-      className="absolute dark:text-gray-50 flex items-center md:top-16 
-    right-2 space-x-0.5 text-gray-800 text-2xl top-1.5"
-    >
+    <div className="absolute dark:text-gray-50 flex items-center md:top-16 right-2 space-x-0.5 text-2xl text-gray-800 xl:top-20">
       <HiMoon
         className={`${
           !checked ? "text-yellow-600 scale-110 dark:text-yellow-400" : null

@@ -1,11 +1,11 @@
 import project1 from "../images/world heritage.jpg";
 import musicPlayer from "../images/music player.jpg";
 import typingSpeed from "../images/typing speed.jpg";
-import pixabay from "../images/pixabay picture gallery.png";
+import pixabay from "../images/pixabay picture gallery.jpg";
 import colorShades from "../images/color shades generator.png";
-import cocktail from "../images/cocktail db.png";
+import cocktail from "../images/cocktail db.jpg";
 import dummyParagraph from "../images/dummy paragraph generator.png";
-import cyanokhoj from "../images/cyanokhoj.png";
+import cyanokhoj from "../images/cyanokhoj.jpg";
 
 export const projects = [
   {
@@ -78,7 +78,7 @@ User can search any of the color to generate different shades of the same color.
         title: "PHP",
       },
       {
-        id: 4,
+        id: 5,
         title: "MySQL",
       },
     ],

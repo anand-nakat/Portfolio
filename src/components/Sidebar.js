@@ -24,7 +24,6 @@ const Sidebar = () => {
   }
 
   useEffect(() => {
-    console.log(aside.current.getBoundingClientRect());
     aside.current.style.top = `${navbarHeight + 0.5}px`;
   }, [navbarHeight]);
   return (
@@ -47,7 +46,7 @@ const Sidebar = () => {
           />
         </div>
         <div className="h-5/6 mt-3 ">
-          <ul className="flex flex-col h-full items-start justify-evenly fixed ">
+          <ul className="flex flex-col h-full items-start justify-evenly md:fixed ">
             {links.map((item) => {
               const { id, link, icon, title } = item;
               return (
