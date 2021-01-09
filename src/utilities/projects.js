@@ -6,6 +6,7 @@ import colorShades from "../images/color shades generator.png";
 import cocktail from "../images/cocktail db.jpg";
 import dummyParagraph from "../images/dummy paragraph generator.png";
 import cyanokhoj from "../images/cyanokhoj.jpg";
+import markdown from "../images/markdown.png";
 
 export const projects = [
   {
@@ -118,6 +119,27 @@ User can search any of the color to generate different shades of the same color.
       {
         id: 6,
         title: "MySQL",
+      },
+    ],
+  },
+  {
+    title: "Live Markdown Preview",
+    link: "https://live-markdown-preview.netlify.app/",
+    image: markdown,
+    description: `This is a simple Web App that generates live preview of the Markdown code that you write. This can be a pretty handy tool when you want to know how your README File will look like in the Github Repository before making a commit.
+I've also added a feature of Local Storage, so that if page is refreshed by mistake, the code written will be saved on local storage of browser and fetched when you open the site again.`,
+    stack: [
+      {
+        id: 1,
+        title: "React",
+      },
+      {
+        id: 2,
+        title: "Tailwind CSS",
+      },
+      {
+        id: 3,
+        title: "Javascript",
       },
     ],
   },
