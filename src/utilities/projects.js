@@ -7,6 +7,7 @@ import cocktail from "../images/cocktail db.jpg";
 import dummyParagraph from "../images/dummy paragraph generator.png";
 import cyanokhoj from "../images/cyanokhoj.jpg";
 import markdown from "../images/markdown.png";
+import hackerNews from "../images/hacker news.png";
 
 export const projects = [
   {
@@ -53,6 +54,7 @@ User can search any of the color to generate different shades of the same color.
       },
     ],
   },
+
   {
     title: "Cyanokhoj",
     link: "http://34.67.7.17/CyanoKhoj/",
@@ -79,7 +81,7 @@ User can search any of the color to generate different shades of the same color.
         title: "PHP",
       },
       {
-        id: 5,
+        id: 4,
         title: "MySQL",
       },
     ],
@@ -91,7 +93,7 @@ User can search any of the color to generate different shades of the same color.
     link: "http://world-heritage-sites.infinityfreeapp.com/",
     description: `Dynamic Website connected to database, featuring Best World
                 Heritage Sites. User can like any site, which will be added to
-                his favourites collection. This collection is stored in
+                his favourites collection. This collection is sotred in
                 database, so it is accessible any time. Also it comes with a
                 admin view, admin can add new site, edit or delete existing
                 site, right through website.`,
@@ -122,6 +124,7 @@ User can search any of the color to generate different shades of the same color.
       },
     ],
   },
+
   {
     title: "Live Markdown Preview",
     link: "https://live-markdown-preview.netlify.app/",
@@ -148,7 +151,7 @@ I've also added a feature of Local Storage, so that if page is refreshed by mist
     link: "https://cocktails-db-project.netlify.app/",
     image: cocktail,
     description: `Cocktail DB makes use of the Cocktail DB API to showcase some of the famous cocktails and you can also search your favorite Cocktail to know its ingredients and procedure to create it.
-This website is built using React JS Library`,
+`,
     stack: [
       {
         id: 1,
@@ -161,6 +164,27 @@ This website is built using React JS Library`,
       {
         id: 3,
         title: "Javascript",
+      },
+    ],
+  },
+  {
+    title: "Hacker News",
+    link: "https://hacker-news-articles.netlify.app/",
+    image: hackerNews,
+    description: `Hacker News is a Web App, that uses Hacker News Search API. It is built on top of Algolia Search's API. 
+    So it is a one stop destination for tech related articles. If you want to read articles on any topic, just search it!`,
+    stack: [
+      {
+        id: 1,
+        title: "React",
+      },
+      {
+        id: 2,
+        title: "Javascript",
+      },
+      {
+        id: 3,
+        title: "Tailwind CSS",
       },
     ],
   },
