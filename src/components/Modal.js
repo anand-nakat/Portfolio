@@ -6,15 +6,15 @@ const Modal = () => {
   useEffect(() => {
     let timeout = setTimeout(() => {
       closeModal();
-    }, 3900);
+    }, 5900);
     return () => {
       clearTimeout(timeout);
     };
-  }, [closeModal]); // eslint-disable-next-line
+    // eslint-disable-next-line
+  }, [closeModal]);
   return (
     <div
-      className="animate-tooltip  transform -translate-x-1/2 bg-indigo-300 bottom-4 dark:bg-indigo-300 dark:text-indigo-800 
-      fixed font-raleway font-semibold left-1/2 p-2 px-3 rounded-lg sm:max-w-max text-center text-indigo-800 text-lg  z-30
+      className="animate-tooltip bg-indigo-300 dark:bg-indigo-300 dark:text-indigo-800 fixed font-raleway font-semibold left-1/2 p-2 px-10 rounded-lg sm:max-w-max text-center text-indigo-800 text-2xl z-30
     "
     >
       <span>{modalContent}</span>

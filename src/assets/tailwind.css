@@ -26,7 +26,7 @@
 
   .sidebar {
     @apply fixed md:static h-full text-lg lg:text-xl xl:text-2xl md:min-h-screen bg-blue-950 dark:bg-gray-900 dark:text-gray-50  md:left-0 
-      p-2 rounded-r text-gray-50 top-0 transition-all w-52 xl:w-auto z-10;
+      p-2 rounded-r text-gray-50 top-0 transition-all w-52 xl:w-auto z-10 shadow-2xl;
   }
   .submenu-close-btn {
     @apply md:hidden cursor-pointer hover:scale-110 hover:text-white text-4xl transform transition;
@@ -36,7 +36,7 @@
   }
   .menu-heading {
     @apply dark:text-blue-300 flex-centered justify-between text-xl text-yellow-400
-    font-sans font-semibold;
+    font-sans font-semibold md:hidden;
   }
 
   /* utility classes */
@@ -52,7 +52,7 @@
         text-3xl lg:text-4xl xl:text-5xl tracking-wide font-black;
   }
   .my-image {
-    @apply dark:border-gray-400 mx-auto rounded-xl shadow-xl w-2/3;
+    @apply dark:border-gray-400 mx-auto rounded-xl shadow-xl w-2/3 md:w-72;
   }
 
   .card {
@@ -78,29 +78,27 @@
 
 @layer utilities {
   .animate-tooltip {
-    animation: tooltip-rise 4s ease-in-out 1;
+    animation: tooltip-rise 6s ease-in-out 1;
+    transform: translateX(-50%);
   }
   @keyframes tooltip-rise {
     0%,
     100% {
-      transform: translateY(4rem);
-      transform: translateX(-50%);
+      bottom: -3rem;
+
       opacity: 0;
     }
     25% {
       opacity: 1;
-      transform: translateY(0rem);
-      transform: translateX(-50%);
+      bottom: 2rem;
     }
 
     50% {
       opacity: 1;
-      transform: translateY(0rem);
-      transform: translateX(-50%);
+      bottom: 2rem;
     }
     75% {
-      transform: translateY(0);
-      transform: translateX(-50%);
+      bottom: 2rem;
       opacity: 1;
     }
   }

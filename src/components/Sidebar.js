@@ -35,7 +35,8 @@ const Sidebar = () => {
       ></div>
       <aside
         ref={aside}
-        className={` sidebar
+        className={` fixed md:relative h-full text-lg lg:text-xl xl:text-2xl md:min-h-screen bg-blue-950 dark:bg-gray-900 dark:text-gray-50  md:left-0 
+      p-2 rounded-r text-gray-50 top-0 transition-all w-52 xl:w-auto z-10 shadow-2xl
       ${isSidebarOpen ? "left-0" : `-left-full`}`}
       >
         <div className="menu-heading">
@@ -45,24 +46,24 @@ const Sidebar = () => {
             className="submenu-close-btn"
           />
         </div>
-        <div className="h-5/6 mt-3 ">
-          <ul className="flex flex-col h-full items-start justify-evenly md:fixed ">
+        <div className="h-5/6 mt-3 fixed">
+          <ul className="flex flex-col h-full items-start justify-evenly ">
             {links.map((item) => {
               const { id, link, icon, title } = item;
               return (
                 <li
                   key={id}
-                  className={`menu-item
+                  className={`transform transition-all
                 ${
                   pathname === link
-                    ? "dark:bg-blue-500 bg-yellow-600 scale-105"
-                    : "hover:text-white hover:translate-y-2"
+                    ? "text-yellow-400 scale-125 translate-x-4"
+                    : "hover:text-yellow-400 hover:translate-y-2"
                 }
                 `}
                 >
                   <Link
                     to={link}
-                    className="flex-centered justify-start md:space-x-1 pl-1 px-30 space-x-1.5"
+                    className="flex-centered justify-start pl-2 space-x-2.5"
                   >
                     <span>{icon}</span>
                     <p>{title}</p>

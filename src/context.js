@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useContext } from "react";
+import React, { useState, useCallback, useContext, useEffect } from "react";
 
 const AppContext = React.createContext();
 
@@ -7,6 +7,14 @@ const AppProvider = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(true);
   const [modalContent, setModalContent] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 4000);
+  });
+
   const openModal = useCallback(() => {
     setIsModalOpen(true);
   }, []);
@@ -31,6 +39,7 @@ const AppProvider = ({ children }) => {
   return (
     <AppContext.Provider
       value={{
+        isLoading,
         navbarHeight,
         changeNavbarHeight,
         closeSidebar,

@@ -9,37 +9,44 @@ import More from "./pages/More";
 import Skills from "./pages/Skills";
 import Navbar from "./components/Navbar";
 import ThemeSwitch from "./components/ThemeSwitch";
+import Loading from "./components/Loading";
+import { useGlobalContext } from "./context";
 
 const App = () => {
+  const { isLoading } = useGlobalContext();
   return (
     <>
-      <Router>
-        <Navbar />
-        <ThemeSwitch />
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/education">
-            <Education />
-          </Route>
-          <Route path="/skills">
-            <Skills />
-          </Route>
-          <Route path="/more">
-            <More />
-          </Route>
-          <Route path="/projects">
-            <Projects />
-          </Route>
-          <Route path="/connect">
-            <Connect />
-          </Route>
-          <Route path="*">
-            <ErrorPage />
-          </Route>
-        </Switch>
-      </Router>
+      {isLoading ? (
+        <Loading />
+      ) : (
+        <Router>
+          <Navbar />
+          <ThemeSwitch />
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/education">
+              <Education />
+            </Route>
+            <Route path="/skills">
+              <Skills />
+            </Route>
+            <Route path="/more">
+              <More />
+            </Route>
+            <Route path="/projects">
+              <Projects />
+            </Route>
+            <Route path="/connect">
+              <Connect />
+            </Route>
+            <Route path="*">
+              <ErrorPage />
+            </Route>
+          </Switch>
+        </Router>
+      )}
     </>
   );
 };

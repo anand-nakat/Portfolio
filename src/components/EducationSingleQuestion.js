@@ -23,7 +23,7 @@ const EducationSingleQuestion = ({ title, info, index }) => {
         </span>
       </h2>
       {showDropdown && (
-        <div className="font-extralight font-sans lg:text-xl text-lg">
+        <div className="font-normal font-sans lg:text-xl text-lg">
           <ul>
             {info.map((item, index) => {
               const {
