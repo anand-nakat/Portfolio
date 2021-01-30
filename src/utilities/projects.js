@@ -46,7 +46,7 @@ export const projects = [
     title: "Comfy E-Store",
     link: "https://comfy-sloth-e-commerce-store.netlify.app/",
     image: comfyStore,
-    description: `An E-commerce website built using React with Stripe for payment gateway. This web app includes multiple pages like Products Page with option to filter your product search, Cart Page to review your purchases and Checkout Page to complete the purchase with Stripe Payment.`,
+    description: `An E-commerce website built using React with Stripe for payment gateway. This web app includes multiple pages like Products Page with option to filter your product search, Cart Page to review your purchases and Checkout Page to complete the purchase with Stripe Payment.Auth0 is used for User Authentication before Checking out.`,
     stack: [
       {
         id: 1,
