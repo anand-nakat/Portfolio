@@ -8,8 +8,39 @@ import dummyParagraph from "../images/dummy paragraph generator.png";
 import cyanokhoj from "../images/cyanokhoj.jpg";
 import markdown from "../images/markdown.png";
 import hackerNews from "../images/hacker news.png";
+import quizApp from "../images/quiz app.png";
+import githubUsers from "../images/github users.png";
 
 export const projects = [
+  {
+    title: "Github Users",
+    link: "https://pixabay-photo-gallery.netlify.app/",
+    image: githubUsers,
+    description: `Uses Github API to provide a summary about a Github User, like number of Repositories owned by the User, number of Followers, Gists created, etc.
+  . It uses Fusion Charts to represent more info like Most Used Languages by the User, Most Starred Repositories, Most Forked Repositories in the form of Charts. It uses Auth0 for User Authentication`,
+    stack: [
+      {
+        id: 1,
+        title: "React",
+      },
+      {
+        id: 2,
+        title: "Tailwind CSS",
+      },
+      {
+        id: 3,
+        title: "Javascript",
+      },
+      {
+        id: 4,
+        title: "Auth0",
+      },
+      {
+        id: 5,
+        title: "Fusion Charts",
+      },
+    ],
+  },
   {
     title: "Pixabay Picture Gallery",
     link: "https://pixabay-photo-gallery.netlify.app/",
@@ -32,6 +63,7 @@ export const projects = [
       },
     ],
   },
+
   {
     title: "Color Shades Generator",
     link: "https://shades-generator.netlify.app/",
@@ -86,7 +118,26 @@ User can search any of the color to generate different shades of the same color.
       },
     ],
   },
-
+  {
+    title: "Quiz Trivia App",
+    link: "https://quiz-trivia-app.netlify.app/",
+    image: quizApp,
+    description: `Quiz Trivia is a Web App that uses Open Trivia DB API to host different quizzes on numerous topics. User can customize the Quiz as per his wish like the Number of Questions in Quiz, Category of Questions and Difficulty Level. Also the score is calculated at real time, as the user is attempting the Quiz.`,
+    stack: [
+      {
+        id: 1,
+        title: "React",
+      },
+      {
+        id: 2,
+        title: "Tailwind CSS",
+      },
+      {
+        id: 3,
+        title: "Javascript",
+      },
+    ],
+  },
   {
     title: "World heritage sites",
     image: project1,

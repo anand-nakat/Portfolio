@@ -1,19 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Sidebar from "../components/Sidebar";
 import { projects } from "../utilities/projects";
-// import Modal from "../components/Modal";
-// import { useGlobalContext } from "../context";
+import Modal from "../components/Modal";
+import { useGlobalContext } from "../context";
 const Projects = () => {
-  // const { isModalOpen, openModal, setModalText } = useGlobalContext();
+  const { isModalOpen, openModal, setModalText } = useGlobalContext();
 
-  /*  useEffect(() => {
+  useEffect(() => {
     setModalText("Click on Card to redirect to live working website");
     openModal();
-  }, [setModalText, openModal]); */
+  }, [setModalText, openModal]);
   return (
     <main className="grid-container">
       <Sidebar />
-      {/* {<Modal />} */}
+      {isModalOpen && <Modal />}
       <div className="page-container">
         <div className="page-heading">My Work</div>
         <section className=" gap-5 grid grid-cols-1 lg:grid-cols-2 2xl:gap-10 pt-10">
@@ -31,7 +31,7 @@ const Projects = () => {
                       {description}
                     </p>
                     <div className="mt-3 flex-centered justify-start space-x-4">
-                      <p className="text-lg xl:text-2xl">Technical Stack:</p>
+                      <p className="text-lg xl:text-xl">Tags:</p>
                       <div
                         className={`flex  space-x-1 space-y-1.5 text-center ${
                           stack.length > 3 ? "flex-wrap" : null

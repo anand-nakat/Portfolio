@@ -6,7 +6,7 @@ const Modal = () => {
   useEffect(() => {
     let timeout = setTimeout(() => {
       closeModal();
-    }, 5900);
+    }, 5800);
     return () => {
       clearTimeout(timeout);
     };
@@ -14,7 +14,7 @@ const Modal = () => {
   }, [closeModal]);
   return (
     <div
-      className="animate-tooltip bg-indigo-300 dark:bg-indigo-300 dark:text-indigo-800 fixed font-raleway font-semibold left-1/2 p-2 px-10 rounded-lg sm:max-w-max text-center text-indigo-800 text-2xl z-30
+      className="animate-tooltip bg-blue-300 dark:bg-blue-300 dark:text-blue-800 fixed font-raleway font-semibold left-1/2 p-2 px-10 rounded-lg sm:w-max w-64 text-center text-blue-800 text-xl z-30
     "
     >
       <span>{modalContent}</span>

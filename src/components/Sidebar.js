@@ -56,7 +56,7 @@ const Sidebar = () => {
                   className={`transform transition-all
                 ${
                   pathname === link
-                    ? "text-yellow-400 scale-125 translate-x-4"
+                    ? "text-yellow-400 "
                     : "hover:text-yellow-400 hover:translate-y-2"
                 }
                 `}
@@ -64,6 +64,7 @@ const Sidebar = () => {
                   <Link
                     to={link}
                     className="flex-centered justify-start pl-2 space-x-2.5"
+                    onClick={() => closeSidebar()}
                   >
                     <span>{icon}</span>
                     <p>{title}</p>
