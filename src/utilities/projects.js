@@ -10,6 +10,7 @@ import markdown from "../images/markdown.png";
 import hackerNews from "../images/hacker news.png";
 import quizApp from "../images/quiz app.png";
 import githubUsers from "../images/github users.png";
+import comfyStore from "../images/comfy store.png";
 
 export const projects = [
   {
@@ -38,6 +39,34 @@ export const projects = [
       {
         id: 5,
         title: "Fusion Charts",
+      },
+    ],
+  },
+  {
+    title: "Comfy E-Store",
+    link: "https://comfy-sloth-e-commerce-store.netlify.app/",
+    image: comfyStore,
+    description: `An E-commerce website built using React with Stripe for payment gateway. This web app includes multiple pages like Products Page with option to filter your product search, Cart Page to review your purchases and Checkout Page to complete the purchase with Stripe Payment.`,
+    stack: [
+      {
+        id: 1,
+        title: "React",
+      },
+      {
+        id: 2,
+        title: "Styled Components",
+      },
+      {
+        id: 3,
+        title: "Javascript",
+      },
+      {
+        id: 4,
+        title: "Auth0",
+      },
+      {
+        id: 5,
+        title: "Stripe Payment",
       },
     ],
   },
