@@ -5,8 +5,9 @@ const AppContext = React.createContext();
 const AppProvider = ({ children }) => {
   const [navbarHeight, setNavbarHeight] = useState(0);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState("");
+  const [modalAppearCount, setModalAppearCount] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -15,6 +16,9 @@ const AppProvider = ({ children }) => {
     }, 4000);
   });
 
+  const increaseModalCount = () => {
+    setModalAppearCount((oldCount) => oldCount + 1);
+  };
   const openModal = useCallback(() => {
     setIsModalOpen(true);
   }, []);
@@ -51,6 +55,8 @@ const AppProvider = ({ children }) => {
         openModal,
         closeModal,
         setModalText,
+        increaseModalCount,
+        modalAppearCount,
       }}
     >
       {children}

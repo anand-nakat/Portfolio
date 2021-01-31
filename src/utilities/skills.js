@@ -9,6 +9,7 @@ export const skills = [
   {
     id: 1,
     title: "languages",
+    color: "blue",
     list: [
       {
         id: 1,
@@ -45,6 +46,7 @@ export const skills = [
   {
     id: 2,
     title: "Libraries/ Frameworks",
+    color: "blue",
     list: [
       {
         id: 1,
@@ -71,6 +73,7 @@ export const skills = [
   {
     id: 3,
     title: "Databases",
+    color: "blue",
     list: [
       {
         id: 1,
@@ -82,6 +85,7 @@ export const skills = [
   {
     id: 4,
     title: "Tools",
+    color: "blue",
     list: [
       {
         id: 1,

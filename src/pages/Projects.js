@@ -4,12 +4,22 @@ import { projects } from "../utilities/projects";
 import Modal from "../components/Modal";
 import { useGlobalContext } from "../context";
 const Projects = () => {
-  const { isModalOpen, openModal, setModalText } = useGlobalContext();
+  const {
+    isModalOpen,
+    openModal,
+    setModalText,
+    increaseModalCount,
+    modalAppearCount,
+  } = useGlobalContext();
 
   useEffect(() => {
-    setModalText("Click on Card to redirect to live working website");
-    openModal();
-  }, [setModalText, openModal]);
+    if (modalAppearCount < 2) {
+      setModalText("Click on Card to view Project");
+      openModal();
+      increaseModalCount();
+    }
+    // eslint-disable-next-line
+  }, []);
   return (
     <main className="grid-container">
       <Sidebar />

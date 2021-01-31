@@ -6,7 +6,13 @@ import { dateObject } from "../utilities/Day-Months";
 import { useGlobalContext } from "../context";
 const Home = () => {
   const { currentTime } = dateObject;
-  const { isModalOpen, setModalText } = useGlobalContext();
+  const {
+    isModalOpen,
+    setModalText,
+    increaseModalCount,
+    modalAppearCount,
+    openModal,
+  } = useGlobalContext();
   let tooltipContent = "";
   if (currentTime > 5 && currentTime < 12) {
     tooltipContent = "Good Morning!";
@@ -18,8 +24,13 @@ const Home = () => {
     tooltipContent = "Good Night!";
   }
   useEffect(() => {
-    setModalText(tooltipContent);
-  }, [tooltipContent, setModalText]);
+    if (modalAppearCount < 2) {
+      setModalText(tooltipContent);
+      openModal();
+      increaseModalCount();
+    }
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <>

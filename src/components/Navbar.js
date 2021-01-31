@@ -10,11 +10,17 @@ const Navbar = () => {
   const { changeNavbarHeight, isSidebarOpen, openSidebar } = useGlobalContext();
   const navbar = useRef(null);
 
+  const getNavbarHeight = () => {
+    if (navbar.current) {
+      const height = navbar.current.getBoundingClientRect().height;
+      changeNavbarHeight(height);
+    }
+  };
+  window.addEventListener("resize", getNavbarHeight);
   useEffect(() => {
-    const height = navbar.current.getBoundingClientRect().height;
-
-    changeNavbarHeight(height);
-  }, [changeNavbarHeight]);
+    getNavbarHeight();
+    // eslint-disable-next-line
+  }, []);
   return (
     <nav ref={navbar} className="navbar">
       {!isSidebarOpen && (

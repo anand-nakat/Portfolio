@@ -11,7 +11,7 @@ const More = () => {
         <div className="page-heading">More About Me</div>
         <section className="min-w-full">
           {more.map((item) => {
-            const { id, title, list } = item;
+            const { id, title, list, color } = item;
             return (
               <div className="card" key={id}>
                 <h2 className="card-header">{title}</h2>
@@ -23,7 +23,9 @@ const More = () => {
                         className="dark:hover:text-yellow-400 flex-centered flex-col hover:-translate-y-2 hover:scale-105 hover:text-blue-950 lg:text-xl space-y-2 text-lg transform transition-all xl:text-2xl"
                         key={id}
                       >
-                        <div className="  dark:hover:text-yellow-300 dark:text-yellow-400 lg:text-4xl text-3xl text-blue-950 xl:text-5xl">
+                        <div
+                          className={` ${color}  lg:text-4xl text-3xl xl:text-5xl `}
+                        >
                           {icon}
                         </div>
 
