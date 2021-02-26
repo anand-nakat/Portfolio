@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Sidebar from "../components/Sidebar";
+import SingleProject from "../components/SingleProject";
 import { projects } from "../utilities/projects";
 import Modal from "../components/Modal";
 import { useGlobalContext } from "../context";
@@ -33,8 +34,10 @@ const Projects = () => {
     // eslint-disable-next-line
   }, []);
   const [projectList, setProjectList] = useState(projects);
+  const [activeTag, setActiveTag] = useState("All");
 
   const filterProject = (tag) => {
+    setActiveTag(tag);
     if (tag === "All") {
       setProjectList(projects);
     } else {
@@ -62,7 +65,11 @@ const Projects = () => {
           {tags.map((tag, index) => {
             return (
               <span
-                className="tag"
+                className={
+                  tag === activeTag
+                    ? `tag border-2 border-blue-800  dark:border-white`
+                    : `tag`
+                }
                 key={index}
                 onClick={() => filterProject(tag)}
               >
@@ -73,38 +80,7 @@ const Projects = () => {
         </div>
         <section className=" gap-5 grid grid-cols-1 lg:grid-cols-2 2xl:gap-10 pt-10">
           {projectList.map((project, index) => {
-            const { title, image, description, stack, link } = project;
-            return (
-              <a href={link} rel="noreferrer" target="_blank" key={index}>
-                <article className="card  max-w-lg p-0 mx-auto transform hover:scale-105 hover:-translate-y-2 transition-all">
-                  <div className="border-b-4 border-blue-700 dark:border-yellow-400">
-                    <img src={image} alt={title} className="h-full w-full" />{" "}
-                  </div>
-                  <div className=" mt-3 pb-4 px-3">
-                    <div className="card-header">{title}</div>
-                    <p className="text-sm xl:text-lg font-raleway">
-                      {description}
-                    </p>
-                    <div className="mt-3 flex-centered justify-start space-x-4">
-                      <p className="text-lg xl:text-xl">Tags:</p>
-                      <div
-                        className={`flex  space-x-1 space-y-1.5 text-center ${
-                          stack.length > 3 ? "flex-wrap" : null
-                        }`}
-                      >
-                        {stack.map((item) => {
-                          return (
-                            <span key={item.id} className="tag">
-                              {item.title}
-                            </span>
-                          );
-                        })}
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </a>
-            );
+            return <SingleProject project={project} key={index} />;
           })}
         </section>
       </div>

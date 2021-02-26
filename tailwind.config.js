@@ -7,6 +7,7 @@ module.exports = {
         "blue-950": "#0d2467",
         "gray-850": "#101010",
         "gray-950": "#131417",
+        card: "#1e1e20",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],

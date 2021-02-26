@@ -24,7 +24,7 @@ const Sidebar = () => {
   }
 
   useEffect(() => {
-    aside.current.style.top = `${navbarHeight + 0.5}px`;
+    aside.current.style.top = `${navbarHeight - 5}px`;
   }, [navbarHeight]);
   return (
     <>
@@ -35,8 +35,8 @@ const Sidebar = () => {
       ></div>
       <aside
         ref={aside}
-        className={` fixed md:relative h-full text-lg lg:text-xl xl:text-2xl md:min-h-screen bg-blue-950 dark:bg-gray-850 dark:text-gray-50  md:left-0 
-      p-2 rounded-r text-gray-50 top-0 transition-all w-52 xl:w-auto z-10 shadow-2xl border-r-2 border-yellow-500 dark:border-gray-700
+        className={` fixed md:relative h-full text-lg lg:text-xl xl:text-2xl md:min-h-screen bg-gray-50 dark:bg-gray-850 dark:text-gray-50  md:left-0 
+      p-2  text-gray-800 top-0 transition-all w-52 xl:w-auto z-10 shadow-xl  
       ${isSidebarOpen ? "left-0" : `-left-full`}`}
       >
         <div className="menu-heading">
@@ -56,8 +56,8 @@ const Sidebar = () => {
                   className={`transform transition-all
                 ${
                   pathname === link
-                    ? "text-yellow-400 dark:text-blue-300 scale-105 transform translate-x-1.5"
-                    : "hover:text-yellow-400 dark: dark:hover:text-blue-300 hover:translate-y-2"
+                    ? "text-blue-600 dark:text-yellow-300 scale-105 transform font-semibold"
+                    : "hover:text-blue-600 dark: dark:hover:text-yellow-300 hover:translate-y-2"
                 }
                 `}
                 >

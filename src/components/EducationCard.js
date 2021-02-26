@@ -3,8 +3,8 @@ import React from "react";
 import { AiFillMinusCircle } from "react-icons/ai";
 import { BsFillPlusCircleFill } from "react-icons/bs";
 
-const EducationSingleQuestion = ({ title, info, index }) => {
-  const [showDropdown, setShowDropdown] = React.useState(false);
+const EducationCard = ({ title, info, index }) => {
+  const [showDropdown, setShowDropdown] = React.useState(true);
 
   return (
     <div
@@ -23,7 +23,7 @@ const EducationSingleQuestion = ({ title, info, index }) => {
         </span>
       </h2>
       {showDropdown && (
-        <div className="font-normal font-sans lg:text-xl text-lg">
+        <div className=" lg:text-xl text-lg text-gray-500 dark:text-gray-300">
           <ul>
             {info.map((item, index) => {
               const {
@@ -61,4 +61,4 @@ const EducationSingleQuestion = ({ title, info, index }) => {
   );
 };
 
-export default EducationSingleQuestion;
+export default EducationCard;

@@ -39,21 +39,16 @@ const Home = () => {
 
         <div className="lg:space-y-14 page-container space-y-8">
           <div className="page-heading">Home</div>
-          <section className="grid gap-3 md:grid-cols-2 items-center">
+          <section className="grid gap-3 md:grid-cols-2 items-center ">
             <div className="self-start">
-              <img
-                src={myself}
-                alt="myself"
-                className="dark:border-gray-400 mx-auto rounded-xl
-                 shadow-xl md:w-72"
-              />
+              <img src={myself} alt="myself" className="my-image" />
             </div>
-            <div className="font-raleway max-w-2xl text-lg xl:text-2xl">
-              <span className=""> Hi there, I'm Anand.</span> I am currently
-              pursuing Bachelor's Degree in Information Technology, at DY Patil
-              College of Engineering, Pune. <br />
-              Currently I'm exploring the world of React JS along with Tailwind
-              CSS and try to build something out of it. <br />
+            <div className="max-w-2xl text-lg xl:text-2xl text-gray-600 dark:text-gray-300">
+              <span className="pl-14"> Hi there, I'm Anand.</span> I am
+              currently pursuing Bachelor's Degree in Information Technology, at
+              DY Patil College of Engineering, Pune. Currently I'm exploring the
+              world of React JS along with Tailwind CSS and try to build
+              something out of it. <br />
               <span className="pl-14"></span>I aspire to be a Full Stack
               Developer. I am a curious, determined person currently exploring
               myself as a Web Developer. <br />

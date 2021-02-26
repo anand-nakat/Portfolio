@@ -22,7 +22,12 @@ const Navbar = () => {
     // eslint-disable-next-line
   }, []);
   return (
-    <nav ref={navbar} className="navbar">
+    <nav
+      ref={navbar}
+      className=" fixed top-0   bg-gray-50
+       text-gray-850 dark:text-gray-100 border-b dark:border-white flex-centered font-semibold 
+      p-3  text-2xl dark:bg-gray-850  w-full z-20 lg:text-3xl xl:text-4xl shadow-md"
+    >
       {!isSidebarOpen && (
         <AiOutlineMenuUnfold
           className=" sidebar-open-btn"

@@ -12,7 +12,6 @@ export const more = [
   {
     id: 1,
     title: "Non Technical ",
-    color: "blue",
     list: [
       {
         id: 1,
@@ -39,7 +38,6 @@ export const more = [
   {
     id: 2,
     title: "Hobbies",
-    color: "blue",
     list: [
       {
         id: 1,

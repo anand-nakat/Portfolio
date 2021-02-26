@@ -1,7 +1,7 @@
 import React from "react";
 import Sidebar from "../components/Sidebar";
 import { educationDetails } from "../utilities/education-details";
-import SingleQuestion from "../components/EducationSingleQuestion";
+import SingleQuestion from "../components/EducationCard";
 
 const Education = () => {
   return (

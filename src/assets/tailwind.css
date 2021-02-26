@@ -12,12 +12,12 @@
 
   /* navbar */
   .navbar {
-    @apply fixed top-0 border-b-2 border-yellow-500 bg-blue-950 dark:border-blue-100
+    @apply fixed top-0   bg-blue-950 
        text-blue-50 flex-centered font-semibold 
-      p-3  text-2xl dark:bg-gray-850  w-full z-20 lg:text-3xl xl:text-4xl;
+      p-3  text-2xl dark:bg-gray-850  w-full z-20 lg:text-3xl xl:text-4xl shadow-2xl;
   }
   .sidebar-open-btn {
-    @apply absolute transform -translate-y-1/2  cursor-pointer hover:text-white hover:scale-110 transition-all
+    @apply absolute transform -translate-y-1/2  cursor-pointer hover:text-black  hover:scale-110 transition-all
      dark:hover:text-white  left-2 md:hidden text-3xl top-1/2 animate-pulse;
   }
   /* navba end */
@@ -29,13 +29,13 @@
       p-2 rounded-r text-gray-50 top-0 transition-all w-52 xl:w-auto z-10 shadow-2xl border-r border-yellow-700 dark:border-gray-700;
   }
   .submenu-close-btn {
-    @apply md:hidden cursor-pointer hover:scale-110 hover:text-white text-4xl transform transition;
+    @apply md:hidden cursor-pointer hover:scale-110 text-black dark:text-gray-50 text-4xl transform transition;
   }
   .menu-item {
     @apply dark:hover:bg-blue-500 hover:bg-yellow-600 transform transition-all  w-48 xl:w-56 2xl:w-64;
   }
   .menu-heading {
-    @apply dark:text-blue-300 flex-centered justify-between text-xl text-white md:hidden;
+    @apply text-gray-900 font-semibold flex-centered justify-between text-xl  dark:text-white md:hidden;
   }
 
   /* utility classes */
@@ -47,7 +47,7 @@
       space-y-6 text-gray-900 text-xl;
   }
   .page-heading {
-    @apply border-b-2 border-gray-800 dark:border-red-50 dark:text-yellow-300 font-josefin 
+    @apply border-b-2 border-gray-800 dark:border-red-50 dark:text-yellow-300 font-poppins 
         text-3xl lg:text-4xl xl:text-5xl tracking-wide font-black;
   }
   .my-image {
@@ -55,8 +55,8 @@
   }
 
   .card {
-    @apply bg-gray-50 my-2 dark:bg-gray-850 dark:text-gray-100 p-2 px-4 rounded-lg overflow-hidden
-    shadow-lg text-gray-800  transform transition-transform cursor-pointer border border-gray-500;
+    @apply bg-gray-50 my-2 dark:bg-card dark:text-gray-100 p-2 px-4 rounded-lg overflow-hidden
+    shadow-xl text-gray-800  transform transition-transform cursor-pointer;
   }
   .card-header {
     @apply flex-centered text-lg lg:text-xl xl:text-2xl  font-black font-raleway justify-between 
