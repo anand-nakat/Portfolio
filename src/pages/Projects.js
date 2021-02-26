@@ -1,8 +1,20 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Sidebar from "../components/Sidebar";
 import { projects } from "../utilities/projects";
 import Modal from "../components/Modal";
 import { useGlobalContext } from "../context";
+
+const tags = [
+  "All",
+  "React",
+  "Javascript",
+  "Tailwind CSS",
+  "HTML",
+  "CSS",
+  "PHP",
+  "MySQL",
+];
+
 const Projects = () => {
   const {
     isModalOpen,
@@ -20,14 +32,47 @@ const Projects = () => {
     }
     // eslint-disable-next-line
   }, []);
+  const [projectList, setProjectList] = useState(projects);
+
+  const filterProject = (tag) => {
+    if (tag === "All") {
+      setProjectList(projects);
+    } else {
+      let tempProjects = projects.filter((project) => {
+        const { stack } = project;
+        if (
+          stack.find((item) => item.title.toLowerCase() === tag.toLowerCase())
+        ) {
+          return project;
+        } else {
+          return null;
+        }
+      });
+      setProjectList(tempProjects);
+    }
+  };
   return (
     <main className="grid-container">
       <Sidebar />
       {isModalOpen && <Modal />}
       <div className="page-container">
         <div className="page-heading">My Work</div>
+        <div className="flex flex-wrap justify-center items-center space-x-1.5 space-y-1">
+          <p>Filter By:</p>
+          {tags.map((tag, index) => {
+            return (
+              <span
+                className="tag"
+                key={index}
+                onClick={() => filterProject(tag)}
+              >
+                {tag}
+              </span>
+            );
+          })}
+        </div>
         <section className=" gap-5 grid grid-cols-1 lg:grid-cols-2 2xl:gap-10 pt-10">
-          {projects.map((project, index) => {
+          {projectList.map((project, index) => {
             const { title, image, description, stack, link } = project;
             return (
               <a href={link} rel="noreferrer" target="_blank" key={index}>
@@ -49,12 +94,7 @@ const Projects = () => {
                       >
                         {stack.map((item) => {
                           return (
-                            <span
-                              key={item.id}
-                              className="bg-blue-300 dark:bg-yellow-300 dark:hover:bg-yellow-400 dark:text-yellow-900 
-                  flex-centered font-light hover:bg-blue-400 px-2 py-1 rounded-lg text-blue-800 text-xs transition-colors 
-                  w-max xl:text-sm"
-                            >
+                            <span key={item.id} className="tag">
                               {item.title}
                             </span>
                           );

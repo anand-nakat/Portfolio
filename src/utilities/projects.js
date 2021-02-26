@@ -135,14 +135,18 @@ User can search any of the color to generate different shades of the same color.
       },
       {
         id: 3,
-        title: "JQuery",
+        title: "Bootstrap",
       },
       {
         id: 4,
-        title: "PHP",
+        title: "JQuery",
       },
       {
         id: 5,
+        title: "PHP",
+      },
+      {
+        id: 6,
         title: "MySQL",
       },
     ],
@@ -192,7 +196,7 @@ User can search any of the color to generate different shades of the same color.
       },
       {
         id: 4,
-        title: "Bootsrap",
+        title: "Bootstrap",
       },
       {
         id: 5,
