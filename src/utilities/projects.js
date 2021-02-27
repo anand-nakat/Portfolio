@@ -15,7 +15,7 @@ import comfyStore from "../images/comfy store.png";
 export const projects = [
   {
     title: "Github Users",
-    link: "https://pixabay-photo-gallery.netlify.app/",
+    link: "https://github-users-summary.netlify.app/",
     image: githubUsers,
     description: `Uses Github API to provide a summary about a Github User, like number of Repositories owned by the User, number of Followers, Gists created, etc.
   . It uses Fusion Charts to represent more info like Most Used Languages by the User, Most Starred Repositories, Most Forked Repositories in the form of Charts. It uses Auth0 for User Authentication`,

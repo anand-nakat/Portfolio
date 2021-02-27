@@ -24,7 +24,7 @@ const Home = () => {
     tooltipContent = "Good Night!";
   }
   useEffect(() => {
-    if (modalAppearCount < 2) {
+    if (modalAppearCount < 1) {
       setModalText(tooltipContent);
       openModal();
       increaseModalCount();

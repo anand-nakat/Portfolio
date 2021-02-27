@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Sidebar from "../components/Sidebar";
 import SingleProject from "../components/SingleProject";
 import { projects } from "../utilities/projects";
-import Modal from "../components/Modal";
-import { useGlobalContext } from "../context";
 
 const tags = [
   "All",
@@ -17,22 +15,6 @@ const tags = [
 ];
 
 const Projects = () => {
-  const {
-    isModalOpen,
-    openModal,
-    setModalText,
-    increaseModalCount,
-    modalAppearCount,
-  } = useGlobalContext();
-
-  useEffect(() => {
-    if (modalAppearCount < 2) {
-      setModalText("Click on Card to view Project");
-      openModal();
-      increaseModalCount();
-    }
-    // eslint-disable-next-line
-  }, []);
   const [projectList, setProjectList] = useState(projects);
   const [activeTag, setActiveTag] = useState("All");
 
@@ -57,7 +39,6 @@ const Projects = () => {
   return (
     <main className="grid-container">
       <Sidebar />
-      {isModalOpen && <Modal />}
       <div className="page-container">
         <div className="page-heading">My Work</div>
         <div className="flex flex-wrap justify-center items-center space-x-1.5 space-y-1">
@@ -67,8 +48,8 @@ const Projects = () => {
               <span
                 className={
                   tag === activeTag
-                    ? `tag border-2 border-blue-800  dark:border-white`
-                    : `tag`
+                    ? `tag  bg-blue-500 text-blue-50 dark:bg-yellow-500 dark:text-yellow-50  text-base`
+                    : `tag text-base hover:bg-blue-500 hover:text-blue-50 dark:hover:bg-yellow-500 dark:hover:text-yellow-50 `
                 }
                 key={index}
                 onClick={() => filterProject(tag)}

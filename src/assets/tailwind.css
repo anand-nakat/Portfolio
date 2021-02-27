@@ -12,9 +12,9 @@
 
   /* navbar */
   .navbar {
-    @apply fixed top-0   bg-blue-950 
-       text-blue-50 flex-centered font-semibold 
-      p-3  text-2xl dark:bg-gray-850  w-full z-20 lg:text-3xl xl:text-4xl shadow-2xl;
+    @apply fixed top-0   bg-gray-50
+       text-gray-850 dark:text-gray-100 border-b dark:border-white flex-centered font-semibold 
+      p-3  text-2xl dark:bg-gray-850  w-full z-20 lg:text-3xl xl:text-4xl shadow-md;
   }
   .sidebar-open-btn {
     @apply absolute transform -translate-y-1/2  cursor-pointer hover:text-black  hover:scale-110 transition-all
@@ -25,14 +25,17 @@
   /*sidebar */
 
   .sidebar {
-    @apply fixed md:relative h-full text-lg lg:text-xl xl:text-2xl md:min-h-screen bg-blue-950 dark:bg-gray-850 dark:text-gray-50  md:left-0 
-      p-2 rounded-r text-gray-50 top-0 transition-all w-52 xl:w-auto z-10 shadow-2xl border-r border-yellow-700 dark:border-gray-700;
+    @apply fixed md:relative h-full text-lg lg:text-xl xl:text-2xl md:min-h-screen bg-gray-50 dark:bg-gray-850 dark:text-gray-50  md:left-0 
+      p-2  text-gray-800 top-0 transition-all w-52 xl:w-auto z-10 shadow-xl;
   }
   .submenu-close-btn {
     @apply md:hidden cursor-pointer hover:scale-110 text-black dark:text-gray-50 text-4xl transform transition;
   }
   .menu-item {
-    @apply dark:hover:bg-blue-500 hover:bg-yellow-600 transform transition-all  w-48 xl:w-56 2xl:w-64;
+    @apply hover:text-blue-600  dark:hover:text-yellow-300 hover:translate-y-2;
+  }
+  .active-menu-item {
+    @apply text-blue-600 dark:text-yellow-300 scale-105 transform font-semibold;
   }
   .menu-heading {
     @apply text-gray-900 font-semibold flex-centered justify-between text-xl  dark:text-white md:hidden;

@@ -8,7 +8,7 @@ const Connect = () => {
       <div className="page-container">
         <div className="page-heading">Let's Connect</div>
         <section className="max-w-lg">
-          <p className="px-8 py-1 text-xl xl:text-2xl mt-10 text-gray-600 dark:text-gray-300">
+          <p className="px-8 py-1 text-lg lg:text-xl xl:text-2xl mt-10 text-gray-600 dark:text-gray-300">
             Enough about me I suppose :) <br />
             Let's have a two way converstaion. <br />
             You can reach me out at:

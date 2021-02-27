@@ -21,9 +21,9 @@ const App = () => {
       ) : (
         <Router>
           <Navbar />
-          <ThemeSwitch />
           <Switch>
             <Route exact path="/">
+              <ThemeSwitch />
               <Home />
             </Route>
             <Route path="/education">

@@ -35,8 +35,8 @@ const Sidebar = () => {
       ></div>
       <aside
         ref={aside}
-        className={` fixed md:relative h-full text-lg lg:text-xl xl:text-2xl md:min-h-screen bg-gray-50 dark:bg-gray-850 dark:text-gray-50  md:left-0 
-      p-2  text-gray-800 top-0 transition-all w-52 xl:w-auto z-10 shadow-xl  
+        className={` fixed md:relative h-full text-lg lg:text-xl xl:text-2xl md:min-h-screen bg-gray-50 dark:bg-gray-850 
+        dark:text-gray-50  md:left-0 p-2  text-gray-800 top-0 transition-all w-52 xl:w-auto z-10 shadow-xl  
       ${isSidebarOpen ? "left-0" : `-left-full`}`}
       >
         <div className="menu-heading">
@@ -54,11 +54,7 @@ const Sidebar = () => {
                 <li
                   key={id}
                   className={`transform transition-all
-                ${
-                  pathname === link
-                    ? "text-blue-600 dark:text-yellow-300 scale-105 transform font-semibold"
-                    : "hover:text-blue-600 dark: dark:hover:text-yellow-300 hover:translate-y-2"
-                }
+                ${pathname === link ? "active-menu-item" : "menu-item"}
                 `}
                 >
                   <Link

@@ -11,27 +11,37 @@ const SingleProject = ({
         <img src={image} alt={title} className="h-full w-full" />{" "}
       </div>
       <div className=" mt-3 pb-4 px-3">
-        <div className="card-header">{title}</div>
-        <p className="text-sm xl:text-lg font-raleway text-gray-600 dark:text-gray-300">
+        <div className="card-header text-xl">
+          <div>{title}</div>
+          <a
+            href={link}
+            rel="noreferrer"
+            target="_blank"
+            className="border-indigo-700 font-black border-2 dark:border-yellow-300 dark:hover:bg-yellow-300 dark:hover:text-black text-indigo-700 dark:text-yellow-50 hover:bg-indigo-600 hover:text-indigo-50 transition-colors uppercase py-0.5 px-1.5 rounded-md text-sm focus:outline-none"
+          >
+            Live Link
+          </a>
+        </div>
+        <p className="text-lg font-raleway text-gray-600 dark:text-gray-300">
           {showMoreText ? description.substring(0, 200) + "...." : description}
 
           <button
-            className="focus:outline-none  p-1 rounded text-lg font-black text-blue-700 dark:text-blue-300 ml-2 "
+            className="focus:outline-none  p-1  text-blue-600 dark:text-yellow-300 ml-2 "
             onClick={() => setShowMoreText(!showMoreText)}
           >
-            {showMoreText ? "Show More" : "Show Less"}
+            {showMoreText ? "Read More" : "Read Less"}
           </button>
         </p>
-        <div className="mt-3 flex-centered justify-start space-x-4">
-          <p className="text-lg xl:text-xl">Tags:</p>
+        <div className="mt-3 flex-centered justify-start space-x-4 text-gray-700 dark:text-gray-200">
+          <p className="text-lg font-semibold">Tags:</p>
           <div
-            className={`flex  space-x-1 space-y-1.5 text-center ${
+            className={`flex  space-x-1.5 space-y-2 text-center ${
               stack.length > 3 ? "flex-wrap" : null
             }`}
           >
             {stack.map((item) => {
               return (
-                <span key={item.id} className="tag">
+                <span key={item.id} className="tag ">
                   {item.title}
                 </span>
               );
