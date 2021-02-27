@@ -41,23 +41,25 @@ const Projects = () => {
       <Sidebar />
       <div className="page-container">
         <div className="page-heading">My Work</div>
-        <div className="flex flex-wrap justify-center items-center space-x-1.5 space-y-1">
-          <p>Filter By:</p>
-          {tags.map((tag, index) => {
-            return (
-              <span
-                className={
-                  tag === activeTag
-                    ? `tag  bg-blue-500 text-blue-50 dark:bg-yellow-500 dark:text-yellow-50  text-base`
-                    : `tag text-base hover:bg-blue-500 hover:text-blue-50 dark:hover:bg-yellow-500 dark:hover:text-yellow-50 `
-                }
-                key={index}
-                onClick={() => filterProject(tag)}
-              >
-                {tag}
-              </span>
-            );
-          })}
+        <div className="flex  flex-col lg:flex-row  items-center space-x-1.5 space-y-1">
+          <div>Filter By:</div>
+          <div className="flex items-center flex-wrap space-x-1 space-y-1 lg:space-y-0">
+            {tags.map((tag, index) => {
+              return (
+                <span
+                  className={
+                    tag === activeTag
+                      ? `tag  bg-blue-500 text-blue-50 dark:bg-yellow-500 dark:text-yellow-50  text-base`
+                      : `tag text-base hover:bg-blue-500 hover:text-blue-50 dark:hover:bg-yellow-500 dark:hover:text-yellow-50 `
+                  }
+                  key={index}
+                  onClick={() => filterProject(tag)}
+                >
+                  {tag}
+                </span>
+              );
+            })}
+          </div>
         </div>
         <section className=" gap-5 grid grid-cols-1 lg:grid-cols-2 2xl:gap-10 pt-10">
           {projectList.map((project, index) => {

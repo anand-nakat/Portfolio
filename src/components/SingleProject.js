@@ -17,7 +17,7 @@ const SingleProject = ({
             href={link}
             rel="noreferrer"
             target="_blank"
-            className="border-indigo-700 font-black border-2 dark:border-yellow-300 dark:hover:bg-yellow-300 dark:hover:text-black text-indigo-700 dark:text-yellow-50 hover:bg-indigo-600 hover:text-indigo-50 transition-colors uppercase py-0.5 px-1.5 rounded-md text-sm focus:outline-none"
+            className="border-indigo-700 flex-shrink-0 text-center font-black border-2 dark:border-yellow-300 dark:hover:bg-yellow-300 dark:hover:text-black text-indigo-700 dark:text-yellow-50 hover:bg-indigo-600 hover:text-indigo-50 transition-colors uppercase py-0.5 px-1.5 rounded-md text-sm focus:outline-none"
           >
             Live Link
           </a>
@@ -33,15 +33,11 @@ const SingleProject = ({
           </button>
         </p>
         <div className="mt-3 flex-centered justify-start space-x-4 text-gray-700 dark:text-gray-200">
-          <p className="text-lg font-semibold">Tags:</p>
-          <div
-            className={`flex  space-x-1.5 space-y-2 text-center ${
-              stack.length > 3 ? "flex-wrap" : null
-            }`}
-          >
+          {/* <p className="text-lg font-semibold">Tags:</p> */}
+          <div className={`flex  space-x-1.5 flex-wrap text-center `}>
             {stack.map((item) => {
               return (
-                <span key={item.id} className="tag ">
+                <span key={item.id} className="tag  mt-1">
                   {item.title}
                 </span>
               );
