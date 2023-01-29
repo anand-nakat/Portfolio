@@ -36,9 +36,11 @@ const EducationCard = ({ title, info, index }) => {
               return (
                 <li key={index}>
                   <p>
-                    {pointer ? `GPA: ${pointer}` : `Percentage: ${percentage}`}
+                    {pointer
+                      ? `GPA: ${pointer}/10`
+                      : `Percentage: ${percentage}`}
                   </p>
-                  <p> {`Institute/Board: ${institute}`}</p>
+                  <p> {`Institute: ${institute}`}</p>
                   <p>
                     {completionYear
                       ? `Completion Year: ${completionYear}`
