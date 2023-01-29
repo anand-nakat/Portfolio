@@ -54,7 +54,7 @@
         text-3xl lg:text-4xl xl:text-5xl tracking-wide font-black;
   }
   .my-image {
-    @apply dark:border-gray-400 mx-auto rounded-xl shadow-xl w-2/3 md:w-72;
+    @apply dark:border-gray-400 mx-auto rounded-xl shadow-xl w-full;
   }
 
   .card {
