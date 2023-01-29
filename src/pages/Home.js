@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Sidebar from "../components/Sidebar";
-import { myself } from "../images/myself-2.jpeg";
+import { myself } from "../images/myself.jpg";
 import Modal from "../components/Modal";
 import { dateObject } from "../utilities/Day-Months";
 import { useGlobalContext } from "../context";
