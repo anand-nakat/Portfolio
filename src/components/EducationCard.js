@@ -29,8 +29,6 @@ const EducationCard = ({ title, info, index }) => {
               const {
                 pointer,
                 percentage,
-                board,
-                university,
                 completionYear,
                 graduationYear,
                 institute,
