@@ -1,12 +1,24 @@
 export const educationDetails = [
   {
-    title: "Bachelor of Engineering (BE)",
+    title: "MTech, Computer Science & Automation",
     info: [
       {
-        pointer: 9.84,
+        pointer: 7.9,
+        university: "IISc",
+        institute: "Indian Institute of Science, Bangalore",
+        completionYear: 2024,
+      },
+    ],
+  },
+  {
+    title: "BE, Information Technology",
+    info: [
+      {
+        pointer: 9.79,
         university: "Pune University",
-        institute: "DY Patil College of Engineering, Akurdi, Pune (Maharashtra)",
-        graduationYear: 2022,
+        institute:
+          "DY Patil College of Engineering, Akurdi, Pune (Maharashtra)",
+        completionYear: 2022,
       },
     ],
   },
