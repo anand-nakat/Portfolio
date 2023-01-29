@@ -4,7 +4,6 @@ export const educationDetails = [
     info: [
       {
         pointer: 7.9,
-        university: "IISc",
         institute: "Indian Institute of Science, Bangalore",
         completionYear: 2024,
       },
@@ -15,9 +14,7 @@ export const educationDetails = [
     info: [
       {
         pointer: 9.79,
-        university: "Pune University",
-        institute:
-          "DY Patil College of Engineering, Akurdi, Pune (Maharashtra)",
+        institute: "DY Patil College of Engineering, Akurdi, Pune",
         completionYear: 2022,
       },
     ],
@@ -28,8 +25,7 @@ export const educationDetails = [
     info: [
       {
         percentage: `82.41%`,
-        board: "Maharashtra State Board",
-        institute: "Dawale Jr College, Akola (Maharashtra)",
+        institute: "Maharashtra State Board",
         completionYear: 2018,
       },
     ],
@@ -39,8 +35,7 @@ export const educationDetails = [
     info: [
       {
         pointer: 10,
-        board: "CBSE Board",
-        institute: "Prabhat Kids School, Akola (Maharashtra)",
+        institute: "CBSE Board",
         completionYear: 2016,
       },
     ],
