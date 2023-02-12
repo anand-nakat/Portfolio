@@ -118,7 +118,7 @@ User can search any of the color to generate different shades of the same color.
 
   {
     title: "Cyanokhoj",
-    link: "http://34.67.7.17/CyanoKhoj/",
+    link: "https://github.com/Chintan2108/CyanoKhoj",
     image: cyanokhoj,
     description: `I worked on this under SLoP Hackathon 2020 where I contributed as a Web Developer and improved the
     UI/UX.It employs the citizen science program by tracking their tweets and subsequent data 
@@ -174,7 +174,7 @@ User can search any of the color to generate different shades of the same color.
   {
     title: "World heritage sites",
     image: project1,
-    link: "http://world-heritage-sites.infinityfreeapp.com/",
+    link: "https://youtu.be/QkRnKz1V6Sw",
     description: `Dynamic Website connected to database, featuring Best World
                 Heritage Sites. User can like any site, which will be added to
                 his favourites collection. This collection is sotred in
