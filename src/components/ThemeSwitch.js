@@ -3,10 +3,10 @@ import Switch from "react-switch";
 import { HiOutlineSun as HiSun, HiOutlineMoon as HiMoon } from "react-icons/hi";
 
 const ThemeSwitch = () => {
-  let mode = true;
-  if (sessionStorage.getItem("Mode")) {
-    mode = sessionStorage.getItem("Mode") === `Dark` ? false : true;
-  }
+  let mode = false;
+  // if (sessionStorage.getItem("Mode")) {
+  //   mode = sessionStorage.getItem("Mode") === `Dark` ? false : true;
+  // }
 
   let html = document.querySelector("html");
   if (mode === false) {
@@ -25,9 +25,8 @@ const ThemeSwitch = () => {
   return (
     <div className="absolute dark:text-gray-50 flex items-center top-3 md:top-16 right-2 space-x-0.5 text-2xl text-gray-800 xl:top-20">
       <HiMoon
-        className={`${
-          !checked ? "text-yellow-600 scale-110 dark:text-yellow-400" : null
-        } cursor-pointer hover:text-yellow-500 dark:hover:text-yellow-300 hover:scale-110 transform transition-all`}
+        className={`${!checked ? "text-yellow-600 scale-110 dark:text-yellow-400" : null
+          } cursor-pointer hover:text-yellow-500 dark:hover:text-yellow-300 hover:scale-110 transform transition-all`}
         onClick={() => {
           setChecked(false);
           toggleDarkMode();
@@ -49,9 +48,8 @@ const ThemeSwitch = () => {
       />
 
       <HiSun
-        className={`${
-          !checked ? null : "text-yellow-600 scale-110 dark:text-yellow-400"
-        } cursor-pointer hover:text-yellow-500 dark:hover:text-yellow-300 hover:scale-110 transform transition-all`}
+        className={`${!checked ? null : "text-yellow-600 scale-110 dark:text-yellow-400"
+          } cursor-pointer hover:text-yellow-500 dark:hover:text-yellow-300 hover:scale-110 transform transition-all`}
         onClick={() => {
           setChecked(true);
           toggleDarkMode();

@@ -39,24 +39,22 @@ const Home = () => {
 
         <div className="lg:space-y-14 page-container space-y-8">
           <div className="page-heading">Home</div>
-          <section className="grid gap-6 md:grid-cols-2 items-center ">
+          <section className="grid gap-6 lg:grid-cols-2 items-start ">
             <div className="self-start">
               <img src={myself} alt="myself" className="my-image" />
             </div>
-            <div className="max-w-2xl text-lg xl:text-2xl text-gray-600 dark:text-gray-300">
-              <span className="pl-14"></span> Hello, I'm Anand. I have completed
-              my graduation in Information Technology from Pune University,
-              2022. Currently I am pursuing MTech in Computer Science and
-              Automation at IISc Bangalore. Having studied subjects from
-              different pools in Computer Science at IISc, I've become more
-              oriented towards Intelligent Systems. <br />
-              <span className="pl-14"></span> Henceforth, I am learning
-              algorithms in machine learning and the beautiful math behind it,
-              and seeking for roles in the same field. Apart from the
-              educational history, I have been a web developer, majorly front
-              end web designing. I am tenacious, diligent and always strive to
-              complete task I am put up to. <br />
-              You can access more details through the Sidebar Menu.
+            <div className="max-w-2xl text-lg xl:text-xl text-gray-600 dark:text-gray-300">
+              <span className="pl-14"></span> Hello! I am Anand Nakat. I am currently pursuing my
+              Master's Degree at IISc Bengaluru from CSA Department. I am working in Game Theory Lab,
+              under Prof. Y. Narahari on the "Crop Price Prediction" project. <br />
+              <span className="pl-14"></span>About by educational background, I appeared for GATE CS 2022
+              and achieved <bold> AIR 49 </bold> among 77,257 students
+              in my 1st attempt. I have completed BE in IT from Pune University in 2022.
+              I have been a web developer in the past during my BE, majorly front
+              end web designing.<br />
+              <span className="pl-14"></span>Having gone through courses from all subject pools at IISc, I have developed keen interset in the field
+              of Intelligent Systems, NLP in particular. Hence prefereably looking for job opportunities
+              in the same field.
             </div>
           </section>
         </div>

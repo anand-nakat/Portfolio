@@ -3,7 +3,7 @@ export const educationDetails = [
     title: "MTech, Computer Science & Automation",
     info: [
       {
-        pointer: 7.9,
+        pointer: 8.1,
         institute: "Indian Institute of Science, Bangalore",
         completionYear: 2024,
       },

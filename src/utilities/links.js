@@ -26,7 +26,7 @@ export const links = [
   },
   {
     id: 4,
-    title: "My Work",
+    title: "Projects",
     link: "/projects",
     icon: <GoProject />,
   },
