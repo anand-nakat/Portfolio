@@ -9,10 +9,294 @@ import cyanokhoj from "../images/cyanokhoj.jpg";
 import markdown from "../images/markdown.png";
 import hackerNews from "../images/hacker news.png";
 import quizApp from "../images/quiz app.png";
-import githubUsers from "../images/github users.png";
+import githubUsers from "../images/github users.jpeg";
 import comfyStore from "../images/comfy store.png";
+import image_caption from "../images/image caption.jpeg";
+import recommendation from "../images/recommendation system.jpg"
+import pos from "../images/pos.png"
+import date_translation from "../images/date_translation.jpeg"
+import community from "../images/community.jpeg"
+import link_prediction from "../images/link_prediction.png"
+import music from "../images/music.jpg"
+import open4 from "../images/open4.jpg"
+import mm from "../images/mm.png"
+import cse from "../images/cse.jpeg"
+import sentiment from "../images/sentiment.png"
 
 export const projects = [
+  {
+    title: " Neural Image Captioning",
+    link: "",
+    image: image_caption,
+    description: `Built Sequence to Sequence model to generate descriptive caption for an image. Trained on Flickr8K Dataset. Used pre-trained computer vision model ResNet as Encoder, LSTM as Decoder and Attention mechanism to attend to
+most relevant pixels. Used Beam Search to generate the optimial sequence of caption description.
+Evaluated performance using metrics like BLEU score and Top-5% accuracy`,
+    stack: [
+      {
+        id: 1,
+        title: "ML",
+      },
+      {
+        id: 2,
+        title: "NLP",
+      },
+      {
+        id: 3,
+        title: "DL",
+      },
+      {
+        id: 4,
+        title: "CV",
+      }
+    ],
+  },
+  {
+    title: "Neural Collaborative Filtering for Recommendation Systems",
+    link: "https://github-users-summary.netlify.app/",
+    image: recommendation,
+    description: `Performed fusion of Generalized Matrix Factorization (GMF) and Mulit-Layer Perceptron (MLP) in order to perform
+collaborative filtering on the basis of implicit feedback using negative sampling.
+Surpasses traditional matrix factorization based machine learning approaches.
+Achieved 0.66 Hit Ratio (HR) on MovieLens dataset.`,
+    stack: [
+      {
+        id: 1,
+        title: "ML",
+      },
+      {
+        id: 2,
+        title: "NLP",
+      },
+      {
+        id: 3,
+        title: "DL",
+      },
+      {
+        id: 4,
+        title: "Recommendation",
+      }
+
+    ],
+  },
+  {
+    title: "Part of Speech Tagging with RNNs and BERT",
+    link: "",
+    image: pos,
+    description: `Identify and label the part of speech of each word in a sentence. Trained on Universal Dependencies English Web Tree
+Bank. Used GloVe as pre-trained word embedding. Used variants of Recurrent Neural Network (RNN) like LSTM, GRU to achieve 89% accuracy. Fine-tuned pre-trained Transformer model BERT to further improve accuracy to 91.68%`,
+    stack: [
+      {
+        id: 1,
+        title: "ML",
+      },
+      {
+        id: 2,
+        title: "NLP",
+      },
+      {
+        id: 3,
+        title: "DL",
+      },
+      {
+        id: 3,
+        title: "Transfer Learning",
+      }
+    ],
+  },
+  {
+    title: " Social Media Link Prediction with Graph Mining",
+    link: "",
+    image: link_prediction,
+    description: `Predicts missing links in a social network, i.e. if a user wants to follow other user. Performed Ingenious Feature Engineering : Page Rank, Katz Centrality, Adar Index, etc. Experimented with classification models like SVM, Random Forest and Logistic Regression.
+     Achieved best F1 Score of 93.53% and AUC score of 0.94`,
+    stack: [
+      {
+        id: 1,
+        title: "ML",
+      },
+      {
+        id: 2,
+        title: "Graph Mining",
+      },
+      {
+        id: 3,
+        title: "Feature Engineering",
+      }
+    ],
+  },
+  {
+    title: "Music Genre Classification and Recommendation",
+    link: "",
+    image: music,
+    description: `Genre classification of audio samples from GTZAN dataset and Recommendation system to suggest similar music.
+Visualized genre groups using Principal Component Analysis (PCA).
+Employed different classification models like Naive Bayes, K-Nearest Neighbors (KNN), Support Vector Classifier (SVC),
+Random Forest, XGBoost to achieve 90% accuracy.
+Converted the audio samples to image representation, and used pre-trained computer vision model ResNet34.
+`,
+    stack: [
+      {
+        id: 1,
+        title: "ML",
+      },
+      {
+        id: 2,
+        title: "DL",
+      },
+      {
+        id: 3,
+        title: "CV",
+      }
+    ],
+  },
+  {
+    title: "Community Detection",
+    link: "https://github.com/anand-nakat/Community_Detection",
+    image: community,
+    description: `Identify different communities on the Facebook Social Circles Dataset.
+Used Iterative Hierarchical Spectral Clustering Algorithm to detect communities using Fiedler Vector.
+Visualized communities by plotting graph using networkx library
+`,
+    stack: [
+      {
+        id: 1,
+        title: "ML",
+      },
+      {
+        id: 2,
+        title: "Unsupervised",
+      },
+      {
+        id: 3,
+        title: "Clustering",
+      }
+    ],
+  },
+  {
+    title: "Neural Date Translation using Attention",
+    link: "https://github.com/anand-nakat/Neural-Date-Translation-using-Attention",
+    image: date_translation,
+    description: `Translated human-readable dates into machine-readable dates, For eg 'Saturday 29 February 2021' => '2021-02-29'. Implemented Encoder-Decoder Architecture with original Aligned Attention mechanism.
+     Used Bi-directional GRU for Encoder/Decoder and Teacher Forcing to improve performance. Achieved 96.56% accuracy with exact match.
+`,
+    stack: [
+      {
+        id: 1,
+        title: "ML",
+      },
+      {
+        id: 2,
+        title: "DL",
+      },
+      {
+        id: 3,
+        title: "NLP",
+      },
+      {
+        id: 4,
+        title: "Attention"
+      }
+    ],
+  },
+  {
+    title: "Hotel Booking Review Classification",
+    link: "",
+    image: sentiment,
+    description: ` Implemented Bi-directional LSTM & DAN for classifiying the sentiment of the reviews. 
+    Used GloVe and FastText as pre-trained embeddings. Achieved best F1-Score of 92.56%.
+`,
+    stack: [
+      {
+        id: 1,
+        title: "ML",
+      },
+      {
+        id: 2,
+        title: "DL",
+      },
+      {
+        id: 3,
+        title: "NLP",
+      }, {
+        id: 4,
+        title: "Embeddings"
+      }
+    ],
+  },
+  {
+    title: "Leveraging SIMD/SIMT for reduced Matrix Multiplications",
+    link: "",
+    image: mm,
+    description: `Discovered ways to parallelize a highly parallel program.
+Performed vectorization, multi-threading, to obtain speedups on the CPU.
+Used CUDA programming to optimize and achieve substantial speedup over CPU based optimizations.
+Used nvprof as GPU profiling tool to analyze the bottlenecks.`,
+    stack: [
+      {
+        id: 1,
+        title: "SDE",
+      },
+      {
+        id: 2,
+        title: "Multi-threading",
+      },
+      {
+        id: 3,
+        title: "Vectorization",
+      },
+      {
+        id: 4,
+        title: "Profiling",
+      }
+
+    ],
+  },
+  {
+    title: "Eliminating Common Sub Expressions:",
+    link: "",
+    image: cse,
+    description: `Wrote a LLVM pass to hoist the anticipated expressions.
+This optimization reduces the code size and avoids redundant calculations.
+Implemented the data flow analysis to compute the anticipated expressions using a backwards-intersection schema`,
+    stack: [
+      {
+        id: 1,
+        title: "SDE",
+      },
+      {
+        id: 2,
+        title: "LLVM",
+      },
+      {
+        id: 3,
+        title: "Compiler Design",
+      },
+    ],
+  },
+  {
+    title: "Open4 : A DRAM access scheduling policy",
+    link: "",
+    image: open4,
+    description: `Analyzed a different memory access scheduling policy.
+Wrote a pin tool to generate traces and used it on set of benchmarks.
+Used DRAMSim3 to implement the policy. Analysed it’s performance against different addressing schemes and access
+patterns`,
+    stack: [
+      {
+        id: 1,
+        title: "SDE",
+      },
+      {
+        id: 2,
+        title: "DRAM",
+      },
+      {
+        id: 3,
+        title: "PIN Tool",
+      },
+    ],
+  },
+
   {
     title: "Github Users",
     link: "https://github-users-summary.netlify.app/",
@@ -22,24 +306,21 @@ export const projects = [
     stack: [
       {
         id: 1,
-        title: "React",
+        title: "SDE",
       },
       {
         id: 2,
-        title: "Tailwind CSS",
+        title: "Web Dev",
       },
       {
         id: 3,
-        title: "Javascript",
+        title: "React",
       },
       {
         id: 4,
-        title: "Auth0",
-      },
-      {
-        id: 5,
-        title: "Fusion Charts",
-      },
+        title: "Tailwind CSS"
+      }
+
     ],
   },
   {
@@ -50,24 +331,20 @@ export const projects = [
     stack: [
       {
         id: 1,
-        title: "React",
+        title: "SDE",
       },
       {
         id: 2,
-        title: "Styled Components",
+        title: "Web Dev",
       },
       {
         id: 3,
-        title: "Javascript",
+        title: "React",
       },
       {
         id: 4,
-        title: "Auth0",
-      },
-      {
-        id: 5,
-        title: "Stripe Payment",
-      },
+        title: "Styled Components",
+      }
     ],
   },
   {
@@ -80,16 +357,20 @@ export const projects = [
     stack: [
       {
         id: 1,
-        title: "React",
+        title: "SDE",
       },
       {
         id: 2,
-        title: "Tailwind CSS",
+        title: "Web Dev",
       },
       {
         id: 3,
-        title: "Javascript",
+        title: "React",
       },
+      {
+        id: 4,
+        title: "Tailwind CSS"
+      }
     ],
   },
 
@@ -103,16 +384,20 @@ User can search any of the color to generate different shades of the same color.
     stack: [
       {
         id: 1,
-        title: "React",
+        title: "SDE",
       },
       {
         id: 2,
-        title: "CSS",
+        title: "Web Dev",
       },
       {
         id: 3,
-        title: "Javascript",
+        title: "React",
       },
+      {
+        id: 4,
+        title: "Tailwind CSS"
+      }
     ],
   },
 
@@ -127,28 +412,20 @@ User can search any of the color to generate different shades of the same color.
     stack: [
       {
         id: 1,
-        title: "HTML",
+        title: "SDE",
       },
       {
         id: 2,
-        title: "CSS",
+        title: "Web Dev",
       },
       {
         id: 3,
-        title: "Bootstrap",
-      },
-      {
-        id: 4,
-        title: "JQuery",
-      },
-      {
-        id: 5,
         title: "PHP",
       },
       {
-        id: 6,
+        id: 4,
         title: "MySQL",
-      },
+      }
     ],
   },
   {
@@ -159,23 +436,27 @@ User can search any of the color to generate different shades of the same color.
     stack: [
       {
         id: 1,
-        title: "React",
+        title: "SDE",
       },
       {
         id: 2,
-        title: "Tailwind CSS",
+        title: "Web Dev",
       },
       {
         id: 3,
-        title: "Javascript",
+        title: "React",
       },
+      {
+        id: 4,
+        title: "Tailwind CSS"
+      }
     ],
   },
   {
     title: "World heritage sites",
     image: project1,
     link: "https://youtu.be/QkRnKz1V6Sw",
-    description: `Dynamic Website connected to database, featuring Best World
+    description: `Web Dev Website connected to database, featuring Best World
                 Heritage Sites. User can like any site, which will be added to
                 his favourites collection. This collection is sotred in
                 database, so it is accessible any time. Also it comes with a
@@ -184,28 +465,20 @@ User can search any of the color to generate different shades of the same color.
     stack: [
       {
         id: 1,
-        title: "HTML",
+        title: "SDE",
       },
       {
         id: 2,
-        title: "CSS",
+        title: "Web Dev",
       },
       {
         id: 3,
-        title: "JQuery",
-      },
-      {
-        id: 4,
-        title: "Bootstrap",
-      },
-      {
-        id: 5,
         title: "PHP",
       },
       {
-        id: 6,
+        id: 4,
         title: "MySQL",
-      },
+      }
     ],
   },
 
@@ -218,11 +491,11 @@ I've also added a feature of Local Storage, so that if page is refreshed by mist
     stack: [
       {
         id: 1,
-        title: "React",
+        title: "SDE",
       },
       {
         id: 2,
-        title: "Tailwind CSS",
+        title: "Web Dev",
       },
       {
         id: 3,
@@ -239,15 +512,15 @@ I've also added a feature of Local Storage, so that if page is refreshed by mist
     stack: [
       {
         id: 1,
-        title: "React",
+        title: "SDE",
       },
       {
         id: 2,
-        title: "CSS",
+        title: "Web Dev",
       },
       {
         id: 3,
-        title: "Javascript",
+        title: "React",
       },
     ],
   },
@@ -260,15 +533,15 @@ I've also added a feature of Local Storage, so that if page is refreshed by mist
     stack: [
       {
         id: 1,
-        title: "React",
+        title: "SDE",
       },
       {
         id: 2,
-        title: "Javascript",
+        title: "Web Dev",
       },
       {
         id: 3,
-        title: "Tailwind CSS",
+        title: "React",
       },
     ],
   },
@@ -282,11 +555,11 @@ I've also added a feature of Local Storage, so that if page is refreshed by mist
     stack: [
       {
         id: 1,
-        title: "HTML",
+        title: "SDE",
       },
       {
         id: 2,
-        title: "CSS",
+        title: "Web Dev",
       },
       {
         id: 3,
@@ -304,15 +577,15 @@ I've also added a feature of Local Storage, so that if page is refreshed by mist
     stack: [
       {
         id: 1,
-        title: "React ",
+        title: "SDE",
       },
       {
         id: 2,
-        title: "CSS",
+        title: "Web Dev",
       },
       {
         id: 3,
-        title: "Javascript",
+        title: "React",
       },
     ],
   },
@@ -326,19 +599,15 @@ I've also added a feature of Local Storage, so that if page is refreshed by mist
     stack: [
       {
         id: 1,
-        title: "HTML",
+        title: "SDE",
       },
       {
         id: 2,
-        title: "CSS",
+        title: "Web Dev",
       },
       {
         id: 3,
         title: "Javascript",
-      },
-      {
-        id: 4,
-        title: "JQuery",
       },
     ],
   },

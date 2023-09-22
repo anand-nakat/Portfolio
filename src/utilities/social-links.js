@@ -1,5 +1,5 @@
 import React from "react";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 
 export const socialIcons = [
@@ -21,4 +21,11 @@ export const socialIcons = [
     title: "Gmail",
     icon: <SiGmail />,
   },
+  {
+    id: 4,
+    link: "https://www.instagram.com/anand_nakat/",
+    title: "Instagram",
+    icon: <FaInstagram />
+  },
+
 ];
