@@ -3,7 +3,7 @@ export const educationDetails = [
     title: "MTech, Computer Science & Automation",
     info: [
       {
-        pointer: 7.9,
+        pointer: 8.1,
         institute: "Indian Institute of Science, Bangalore",
         completionYear: 2024,
       },
@@ -24,7 +24,7 @@ export const educationDetails = [
     title: "Higher Secondary Certificate (HSC)",
     info: [
       {
-        percentage: `82.41%`,
+        percentage: `82.46%`,
         institute: "Maharashtra State Board",
         completionYear: 2018,
       },

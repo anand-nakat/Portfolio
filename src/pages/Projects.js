@@ -5,13 +5,11 @@ import { projects } from "../utilities/projects";
 
 const tags = [
   "All",
-  "React",
-  "Javascript",
-  "Tailwind CSS",
-  "HTML",
-  "CSS",
-  "PHP",
-  "MySQL",
+  "SDE",
+  "Web Dev",
+  "ML",
+  "DL",
+  "NLP",
 ];
 
 const Projects = () => {
@@ -40,9 +38,9 @@ const Projects = () => {
     <main className="grid-container">
       <Sidebar />
       <div className="page-container">
-        <div className="page-heading">My Work</div>
-        <div className="flex  flex-col lg:flex-row  items-center space-x-1.5 space-y-1">
-          <div>Filter By:</div>
+        <div className="page-heading">Projects</div>
+        <div>Filter Projects by Topics</div>
+        <div className="flex  flex-col lg:flex-row  items-center space-x-1.5 ">
           <div className="flex items-center flex-wrap space-x-1 space-y-1 lg:space-y-0">
             {tags.map((tag, index) => {
               return (
