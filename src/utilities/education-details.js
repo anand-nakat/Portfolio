@@ -24,7 +24,7 @@ export const educationDetails = [
     title: "Higher Secondary Certificate (HSC)",
     info: [
       {
-        percentage: `82.41%`,
+        percentage: `82.46%`,
         institute: "Maharashtra State Board",
         completionYear: 2018,
       },
