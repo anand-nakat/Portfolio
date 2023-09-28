@@ -10,7 +10,7 @@ const Connect = () => {
         <section className="max-w-lg">
           <p className="px-8 py-1 text-lg lg:text-xl xl:text-2xl mt-10 text-gray-600 dark:text-gray-300">
             Enough about me I suppose :) <br />
-            Let's have a two way converstaion. <br />
+            Let's have a two way conversation. <br />
             You can reach me out at: <span className="text-blue-500 dark:text-yellow-300"><a href="mailto:anandnakat@iisc.ac.in">anandnakat@iisc.ac.in</a> </span>
 
           </p>

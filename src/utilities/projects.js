@@ -11,7 +11,7 @@ import hackerNews from "../images/hacker news.png";
 import quizApp from "../images/quiz app.png";
 import githubUsers from "../images/github users.jpeg";
 import comfyStore from "../images/comfy store.png";
-import image_caption from "../images/image caption.jpeg";
+import image_caption from "../images/image caption.jpg";
 import recommendation from "../images/recommendation system.jpg"
 import pos from "../images/pos.png"
 import date_translation from "../images/date_translation.jpeg"
@@ -52,7 +52,7 @@ Evaluated performance using metrics like BLEU score and Top-5% accuracy`,
   },
   {
     title: "Neural Collaborative Filtering for Recommendation Systems",
-    link: "https://github-users-summary.netlify.app/",
+    link: "",
     image: recommendation,
     description: `Performed fusion of Generalized Matrix Factorization (GMF) and Mulit-Layer Perceptron (MLP) in order to perform
 collaborative filtering on the basis of implicit feedback using negative sampling.
@@ -62,14 +62,6 @@ Achieved 0.66 Hit Ratio (HR) on MovieLens dataset.`,
       {
         id: 1,
         title: "ML",
-      },
-      {
-        id: 2,
-        title: "NLP",
-      },
-      {
-        id: 3,
-        title: "DL",
       },
       {
         id: 4,

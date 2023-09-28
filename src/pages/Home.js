@@ -46,12 +46,12 @@ const Home = () => {
             <div className="max-w-2xl text-lg xl:text-xl text-gray-600 dark:text-gray-300">
               <span className="pl-14"></span> Hello! I am Anand Nakat. I am currently pursuing my
               Master's Degree at IISc Bengaluru from CSA Department. I am working in Game Theory Lab,
-              under Prof. Y. Narahari on the "Crop Price Prediction" project. <br />
+              under Prof. Yadati Narahari on the "Crop Price Prediction and Crop Recommendation" project. <br />
               <span className="pl-14"></span>About by educational background, I appeared for GATE CS 2022
               and achieved <bold> AIR 49 </bold> among 77,257 students
               in my 1st attempt. I have completed BE in IT from Pune University in 2022.
-              I have been a web developer in the past during my BE, majorly front
-              end web designing.<br />
+              I have been a web developer in the past during my BE, majorly as a front
+              end web developer.<br />
               <span className="pl-14"></span>Having gone through courses from all subject pools at IISc, I have developed keen interset in the field
               of Intelligent Systems, NLP in particular. Hence prefereably looking for job opportunities
               in the same field.
